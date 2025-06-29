@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lovnishverma.github.io/sitemap.xml
