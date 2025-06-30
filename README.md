@@ -46,8 +46,6 @@ This is a fully responsive and SEO-optimized portfolio site designed using **HTM
 ```bash
 lovnishverma.github.io/
 ├── index.html          # Main HTML content with SEO optimization
-├── style.css           # Responsive stylesheet
-├── script.js           # WhatsApp/contact logic & interactions
 ├── sitemap.xml         # XML sitemap for search engines
 ├── robots.txt          # Bot crawler instructions
 ├── assets/             # Optimized images, icons, testimonials
