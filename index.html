@@ -84,7 +84,890 @@
     <link rel="apple-touch-icon" href="assets/favicon/lovnishfavicon.png" />
     
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    
+    <style>
+    /* Enhanced CSS with mobile-friendly testimonials and AMP optimizations */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #0a0a0a;
+      color: white;
+    }
+
+    /* Header Styles */
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-title {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .title-first-name, .title-last-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .title-first-name {
+      color: #00ff88;
+    }
+
+    .navbar-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .navbar-menu a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-menu a:hover {
+      color: #00ff88;
+    }
+
+    .social-media {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    .social-media a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-media a:hover {
+      color: #00ff88;
+    }
+
+    /* Main Content */
+    #content-body {
+      margin-top: 80px;
+      padding: 2rem;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .body-part-1 {
+      flex: 1;
+      z-index: 2;
+    }
+
+    .developer-intro p {
+      font-size: 1.2rem;
+      color: #00ff88;
+      margin-bottom: 0.5rem;
+    }
+
+    .body-title h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .body-title p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .body-title a {
+      display: inline-block;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      color: black;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .body-title a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3);
+    }
+
+    /* Let's Chat Button */
+    .chat-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      color: black;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .chat-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3);
+    }
+
+    .body-tail {
+      display: flex;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Skills Animation */
+    .body-part-2 {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hoodie-guy-animation-class {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .hoodie-guy {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+    }
+
+    .circle span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(calc(var(--i) * 24deg)) translateY(-180px);
+    }
+
+    .circle span img {
+      border-radius: 10px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .circle span img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes rotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Services Section */
+    #introduction {
+      padding: 4rem 2rem;
+      background: #111;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .design-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .design-card:hover, .design-card.active {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+      border-color: #00ff88;
+    }
+
+    .design-card div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .design-card h3 {
+      color: #00ff88;
+      font-size: 1.3rem;
+    }
+
+    .design-card i {
+      font-size: 2rem;
+      color: #00ff88;
+    }
+
+    .design-card p {
+      color: #ccc;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .design-card a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .introduction-text {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .introduction-text p:first-child {
+      color: #00ff88;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .introduction-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .introduction-text h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .introduction-text p:last-child {
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    /* Portfolio Section */
+    #latest-works {
+      padding: 4rem 2rem;
+      background: #0a0a0a;
+    }
+
+    .latest-work-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .latest-work-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .latest-work-title p {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+    }
+
+    .project-card .title h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card .title h3 a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .project-card .title h3 a:hover {
+      color: #00ff88;
+    }
+
+    .tech-stack {
+      margin-bottom: 1rem;
+    }
+
+    .tech-stack span {
+      color: #00ff88;
+      font-size: 0.9rem;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-top: 1rem;
+    }
+
+    .all-projects {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .all-projects a {
+      color: #00ff88;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .all-projects p {
+      color: #ccc;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .all-projects p a {
+      color: #00ccff;
+    }
+
+    /* Mobile-Friendly Testimonials Section */
+    #testimonial {
+      padding: 4rem 2rem;
+      background: #111;
+    }
+
+    .testimonial-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .testimonial-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .testimonial-title p {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    /* Testimonial Container */
+    .testimonial-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-content {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .testimonial-cards {
+      flex: 2;
+      position: relative;
+      min-height: 300px;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: absolute;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    .testimonial-card.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .star-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .star-rating i {
+      color: #ffd700;
+      font-size: 1.2rem;
+    }
+
+    .star-rating p {
+      color: #00ff88;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    .testimonial-card h4 {
+      color: #ccc;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-card .fa-quote-right {
+      color: #00ff88;
+      font-size: 2rem;
+      float: right;
+    }
+
+    .client-profiles {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .single-profile-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .single-profile-card:hover,
+    .single-profile-card.active {
+      background: rgba(0, 255, 136, 0.1);
+      border-color: #00ff88;
+      transform: translateX(10px);
+    }
+
+    .single-profile-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .single-profile-card h4 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .single-profile-card p {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .single-profile-card a {
+      color: #00ccff;
+      text-decoration: none;
+    }
+
+    .single-profile-card a:hover {
+      color: #00ff88;
+    }
+
+    /* Testimonial Navigation */
+    .testimonial-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-dot.active {
+      background: #00ff88;
+      transform: scale(1.2);
+    }
+
+    /* Footer */
+    #footer {
+      background: #0a0a0a;
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .email-form h3 {
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .email-form span {
+      color: #00ff88;
+    }
+
+    .email-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .email-form input {
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+      font-size: 1rem;
+    }
+
+    .email-form input::placeholder {
+      color: #ccc;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .form-row input {
+      flex: 1;
+    }
+
+    .form-row button {
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      color: black;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .form-row button:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-title {
+      margin-top: 3rem;
+    }
+
+    .footer-title h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .footer-email-intro p {
+      color: #00ff88;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-email-intro h4 {
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-email-intro a {
+      color: #00ccff;
+      text-decoration: none;
+    }
+
+    .footer-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-menu a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-menu a:hover {
+      color: #00ff88;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #00ff88;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      #header {
+        flex-direction: column;
+        padding: 1rem;
+        position: relative;
+      }
+
+      .navbar-menu {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .social-media {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #content-body {
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .body-title h2 {
+        font-size: 2rem;
+      }
+
+      .body-tail {
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .hoodie-guy-animation-class {
+        width: 300px;
+        height: 300px;
+      }
+
+      .circle span {
+        transform: translate(-50%, -50%) rotate(calc(var(--i) * 24deg)) translateY(-130px);
+      }
+
+      .circle span img {
+        height: 50px !important;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .introduction-text h2 {
+        font-size: 2rem;
+      }
+
+      .latest-work-title h2 {
+        font-size: 2rem;
+      }
+
+      .testimonial-title h2 {
+        font-size: 2rem;
+      }
+
+      /* Mobile Testimonials */
+      .testimonial-content {
+        flex-direction: column;
+      }
+
+      .client-profiles {
+        order: -1;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+      }
+
+      .single-profile-card {
+        flex-shrink: 0;
+        min-width: 200px;
+      }
+
+      .single-profile-card:hover,
+      .single-profile-card.active {
+        transform: translateY(-5px);
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-menu {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .body-title h2 {
+        font-size: 1.5rem;
+      }
+
+      .introduction-text h2,
+      .latest-work-title h2,
+      .testimonial-title h2 {
+        font-size: 1.5rem;
+      }
+
+      .design-card,
+      .project-card,
+      .testimonial-card {
+        padding: 1.5rem;
+      }
+
+      .hoodie-guy-animation-class {
+        width: 250px;
+        height: 250px;
+      }
+
+      .circle span {
+        transform: translate(-50%, -50%) rotate(calc(var(--i) * 24deg)) translateY(-100px);
+      }
+
+      .circle span img {
+        height: 40px !important;
+      }
+    }
+
+    /* AMP-friendly animations */
+    @media (prefers-reduced-motion: reduce) {
+      .circle {
+        animation: none;
+      }
+      
+      .testimonial-card,
+      .design-card,
+      .project-card {
+        transition: none;
+      }
+    }
+    </style>
   </head>
   <body>
     <!-- Header Section with Navigation -->
@@ -120,6 +1003,32 @@
 
     <!-- Main Content Section -->
     <main id="content-body" role="main">
+      <section class="body-part-1" aria-label="Hero introduction">
+        <div class="developer-intro">
+          <p>AI/ML Enthusiast</p>
+          <p>Data Scientist</p>
+        </div>
+        <div class="body-title">
+          <h2>Transforming Data into <br />Intelligence</h2>
+          <p>
+            I specialize in building intelligent systems,<br />extracting
+            insights from data, and solving complex problems using AI and
+            Machine Learning.
+          </p>
+          <button class="chat-button" onclick="redirectToWhatsApp()" aria-label="Start chat on WhatsApp">LET'S CHAT!</button>
+        </div>
+        <div class="body-tail" role="region" aria-label="Experience statistics">
+          <div class="stat-item">
+            <h3 style="color: #00ff88;">3</h3>
+            <p>YEARS<br />EXPERIENCE</p>
+          </div>
+          <div class="stat-item">
+            <h3 style="color: #00ff88;">100+</h3>
+            <p>PROJECTS<br />COMPLETED</p>
+          </div>
+        </div>
+      </section>
+
       <section class="body-part-2" aria-label="Skills showcase">
         <div class="hoodie-guy-animation-class">
           <div class="hoodie-guy" role="img" aria-label="Developer illustration"></div>
@@ -143,38 +1052,12 @@
         </div>
         <div class="background-circle" aria-hidden="true"></div>
       </section>
-
-      <section class="body-part-1" aria-label="Hero introduction">
-        <div class="developer-intro">
-          <p>AI/ML Enthusiast</p>
-          <p>Data Scientist</p>
-        </div>
-        <div class="body-title">
-          <h2>Transforming Data into <br />Intelligence</h2>
-          <p>
-            I specialize in building intelligent systems,<br />extracting
-            insights from data, and solving complex problems using AI and
-            Machine Learning.
-          </p>
-           <a onclick="redirectToWhatsApp()">LET'S CHAT!</a>
-        </div>
-        <div class="body-tail" role="region" aria-label="Experience statistics">
-          <div class="stat-item">
-            <h3 style="color: green;">3</h3>
-            <p>YEARS<br />EXPERIENCE</p>
-          </div>
-          <div class="stat-item">
-            <h3 style="color: green;">100+</h3>
-            <p>PROJECTS<br />COMPLETED</p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- Services Section -->
     <section id="introduction" aria-label="Services and introduction">
       <div class="cards">
-        <div class="design-card active">
+        <div class="design-card active" onclick="switchCard(0)">
           <div>
             <h3>AI/ML Enthusiast</h3>
             <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -184,29 +1067,30 @@
             Learning, and Deep Learning to solve real-world problems. Skilled in
             Python, TensorFlow, and data-driven insights.
           </p>
-          <a href="">30+ PROJECTS</a>
+          <a href="#latest-works">30+ PROJECTS</a>
         </div>
-        <div class="design-card">
+        <div class="design-card" onclick="switchCard(1)">
           <div>
             <h3>Frontend Development</h3>
             <i class="fa-solid fa-code"></i>
           </div>
-          <p>Making the Web Look Good</p>
-          <a href="">30+ PROJECTS</a>
+          <p>Creating stunning and responsive web interfaces that capture user attention and provide seamless user experiences.</p>
+          <a href="#latest-works">30+ PROJECTS</a>
         </div>
-        <div class="design-card">
+        <div class="design-card" onclick="switchCard(2)">
           <div>
             <h3>Backend Development</h3>
             <i class="fa-solid fa-terminal"></i>
           </div>
-          <p>Building the Web’s Backbone</p>
-          <a href="">50+ PROJECTS</a>
+          <p>Building robust and scalable server-side applications with secure APIs and efficient database management.</p>
+          <a href="#latest-works">50+ PROJECTS</a>
         </div>
       </div>
-      <div class="introduction-text">
+      
+      <div class="introduction-text" id="intro-0">
         <p>Introduction</p>
         <h2>Hello! I'm Lovnish Verma</h2>
-        <h4 style="color: green;">AI/ML & Data Science Specialist</h4>
+        <h4 style="color: #00ff88;">AI/ML &amp; Data Science Specialist</h4>
         <p>
           I am passionate about leveraging AI and Machine Learning to solve
           real-world problems. With expertise in predictive modeling, natural
@@ -214,293 +1098,370 @@
           systems that transform industries.
         </p>
       </div>
-      <div class="introduction-text" style="display: none">
+      
+      <div class="introduction-text" id="intro-1" style="display: none">
         <p>Introduction</p>
         <h2>Hello! I'm Lovnish Verma</h2>
-        <h4 style="color: green;">The Web’s & Mobile’s Magician</h4>
+        <h4 style="color: #00ff88;">Frontend Development Expert</h4>
         <p>
           As a frontend developer, I create stunning and responsive web pages
-          that capture the attention and imagination of the users. I use my
-          skills in HTML, CSS, JavaScript, and various frameworks and libraries
-          to design and implement user interfaces that are both visually
-          appealing and user-friendly.
+          that capture the attention and imagination of users. I use my
+          skills in HTML, CSS, JavaScript, and various frameworks to design
+          and implement user interfaces that are both visually appealing and user-friendly.
         </p>
       </div>
-      <div class="introduction-text" style="display: none">
+      
+      <div class="introduction-text" id="intro-2" style="display: none">
         <p>Introduction</p>
         <h2>Hello! I'm Lovnish Verma</h2>
-        <h4 style="color: green;">Coding with Efficiency</h4>
+        <h4 style="color: #00ff88;">Backend Development Specialist</h4>
         <p>
           As a backend developer, I create robust and scalable web applications
           that handle the logic and data behind the scenes. I use my skills in
-          Python, Django, SQL, and various APIs and tools to develop and deploy
+          Python, Django, SQL, and various APIs to develop and deploy
           backend systems that are secure, reliable, and efficient.
         </p>
       </div>
-          </section>
+    </section>
 
     <!-- Portfolio Section -->
     <section id="latest-works" aria-label="Portfolio showcase">
-      <div class="left-project">
-        <div class="latest-work-title">
-          <h2>Latest Works</h2>
-          <p>Perfect solutions for digital experience</p>
-        </div>
-        <article class="project-card project-card-1">
-          <div class="title">
-            <h3>
-              <a href="https://huggingface.co/spaces/LovnishVerma/braintumor" 
-                 target="_blank" rel="noopener"
-                 style="color: white; text-decoration: none"
-                 aria-label="Brain Tumor Prediction AI Model">Brain Tumor Prediction</a>
-            </h3>
-            <div class="tech-stack" role="list" aria-label="Technologies used">
-              <span style="color: white;"> TensorFlow, </span>
-              <span style="color: white;"> Flask, </span>
-              <span style="color: white;"> MongoDB </span>
-            </div>
-          </div>
-          <img src="assets/projectsimg/braintumor.png"
-               alt="Brain Tumor Prediction AI Interface Screenshot"
-               class="project-img-2"
-               loading="lazy" />
-        </article>
-
-      <div class="right-project">
-        <article class="project-card project-card-2">
-          <div class="title">
-            <h3>
-              <a href="https://predictdiabetes.glitch.me/" 
-                 target="_blank" rel="noopener"
-                 style="color: white; text-decoration: none"
-                 aria-label="Diabetes Prediction ML Model">Diabetes Prediction</a>
-            </h3>
-            <div class="tech-stack" role="list" aria-label="Technologies used">
-              <span style="color: white;"> Flask, </span>
-              <span style="color: white;"> Scikit-Learn </span>
-            </div>
-          </div>
-          <img src="assets/projectsimg/diabetes.png"
-               alt="Diabetes Prediction Model Interface Screenshot"
-               class="project-img-2"
-               loading="lazy" />
-        </article>
-
-        <article class="project-card project-card-3">
-          <div class="title">
-            <h3>
-              <a href="https://flaskmongo.glitch.me/" 
-                 target="_blank" rel="noopener"
-                 style="color: white; text-decoration: none"
-                 aria-label="To Do Notes Web Application">To Do Notes App</a>
-            </h3>
-            <div class="tech-stack" role="list" aria-label="Technologies used">
-              <span style="color: white;"> Flask, </span>
-              <span style="color: white;"> MongoDB </span>
-            </div>
-          </div>
-          <img src="assets/projectsimg/todo.png"
-               alt="To Do Notes Application Interface Screenshot"
-               class="project-img-3"
-               loading="lazy" />
-        </article>
+      <div class="latest-work-title">
+        <h2>Latest Works</h2>
+        <p>Perfect solutions for digital experience</p>
       </div>
-          <div class="all-projects">
-          <a href="https://github.com/lovnishVerma" target="_blank" rel="noopener" aria-label="View all open source projects on GitHub">
-            <h3>ALL PROJECTS</h3>
-          </a>
-          <p>
-            * Some projects are not allowed to publish by NDA<br />if you want
-            to check my opensource projects.
-            <a href="https://glitch.com/@lovnishverma" target="_blank" rel="noopener">See on Glitch</a>
-          </p>
+      
+      <div class="project-card">
+        <div class="title">
+          <h3>
+            <a href="https://huggingface.co/spaces/LovnishVerma/braintumor" 
+               target="_blank" rel="noopener"
+               aria-label="Brain Tumor Prediction AI Model">Brain Tumor Prediction</a>
+          </h3>
+          <div class="tech-stack" role="list" aria-label="Technologies used">
+            <span>TensorFlow, </span>
+            <span>Flask, </span>
+            <span>MongoDB</span>
+          </div>
         </div>
+        <img src="assets/projectsimg/braintumor.png"
+             alt="Brain Tumor Prediction AI Interface Screenshot"
+             loading="lazy" />
+      </div>
+
+      <div class="project-card">
+        <div class="title">
+          <h3>
+            <a href="https://predictdiabetes.glitch.me/" 
+               target="_blank" rel="noopener"
+               aria-label="Diabetes Prediction ML Model">Diabetes Prediction</a>
+          </h3>
+          <div class="tech-stack" role="list" aria-label="Technologies used">
+            <span>Flask, </span>
+            <span>Scikit-Learn</span>
+          </div>
+        </div>
+        <img src="assets/projectsimg/diabetes.png"
+             alt="Diabetes Prediction Model Interface Screenshot"
+             loading="lazy" />
+      </div>
+
+      <div class="project-card">
+        <div class="title">
+          <h3>
+            <a href="https://flaskmongo.glitch.me/" 
+               target="_blank" rel="noopener"
+               aria-label="To Do Notes Web Application">To Do Notes App</a>
+          </h3>
+          <div class="tech-stack" role="list" aria-label="Technologies used">
+            <span>Flask, </span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+        <img src="assets/projectsimg/todo.png"
+             alt="To Do Notes Application Interface Screenshot"
+             loading="lazy" />
+      </div>
+
+      <div class="all-projects">
+        <a href="https://github.com/lovnishVerma" target="_blank" rel="noopener" aria-label="View all open source projects on GitHub">
+          <h3>ALL PROJECTS</h3>
+        </a>
+        <p>
+          * Some projects are not allowed to publish by NDA<br />if you want
+          to check my opensource projects.
+          <a href="https://glitch.com/@lovnishverma" target="_blank" rel="noopener">See on Glitch</a>
+        </p>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Mobile-Friendly Testimonials Section -->
     <section id="testimonial" aria-label="Client testimonials">
       <div class="testimonial-title">
         <h2>Testimonials</h2>
-        <p>What's client say about me</p>
+        <p>What clients say about me</p>
       </div>
-      <div class="testimonial-card">
-        <div class="star-rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>5.0 Rating</p>
-        </div>
-        <h4>
-          Lovnish was a real pleasure to work with and we look forward to
-          working with him again. He's definitely the kind developer you can
-          trust with a project from start to finish
-        </h4>
-        <i class="fa-solid fa-quote-right"></i>
-      </div>
-      <div class="testimonial-card" style="display: none">
-        <div class="star-rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>4.5 Rating</p>
-        </div>
-        <h4>
-          Working with Lovnish was a pleasure. His expertise in both design and
-          development allowed him to create a website that exceeded
-          expectations. We couldn't be happier with the end result.
-        </h4>
-        <i class="fa-solid fa-quote-right"></i>
-      </div>
-      <div class="testimonial-card" style="display: none">
-        <div class="star-rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>4.0 Rating</p>
-        </div>
-        <h4>
-          I highly recommend Lovnish for any design or development project. He
-          have the skills, experience, and passion to create stunning,
-          functional solutions that will take your business to the next level.
-        </h4>
-        <i class="fa-solid fa-quote-right"></i>
-      </div>
-      <div class="client-profile-card">
-        <div class="single-profile-card profile-card-active">
-          <br>
-          <img
-            src="assets/testimonials/sarwan_singh.png"
-            alt="Dr. Sarwan Singh NIELIT Chandigarh (Ropar Campus)"
-          />
-          <div>
-            <h4>Dr. Sarwan Singh</h4>
-            <br>
-            <p>
-              Joint Director,
-              <a href=" https://www.nielit.gov.in/chandigarh/index.php "
-                >NIELIT Chandigarh</a
-              > <br>
-            </p>
+      
+      <div class="testimonial-container">
+        <div class="testimonial-content">
+          <div class="testimonial-cards">
+            <div class="testimonial-card active" id="testimonial-0">
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>5.0 Rating</p>
+              </div>
+              <h4>
+                Lovnish was a real pleasure to work with and we look forward to
+                working with him again. He's definitely the kind of developer you can
+                trust with a project from start to finish.
+              </h4>
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            
+            <div class="testimonial-card" id="testimonial-1">
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>4.5 Rating</p>
+              </div>
+              <h4>
+                Working with Lovnish was a pleasure. His expertise in both design and
+                development allowed him to create a website that exceeded
+                expectations. We couldn't be happier with the end result.
+              </h4>
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            
+            <div class="testimonial-card" id="testimonial-2">
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>4.0 Rating</p>
+              </div>
+              <h4>
+                I highly recommend Lovnish for any design or development project. He
+                has the skills, experience, and passion to create stunning,
+                functional solutions that will take your business to the next level.
+              </h4>
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+          </div>
+          
+          <div class="client-profiles">
+            <div class="single-profile-card active" onclick="switchTestimonial(0)">
+              <img src="assets/testimonials/sarwan_singh.png"
+                   alt="Dr. Sarwan Singh NIELIT Chandigarh" />
+              <div>
+                <h4>Dr. Sarwan Singh</h4>
+                <p>
+                  Joint Director,<br>
+                  <a href="https://www.nielit.gov.in/chandigarh/index.php" target="_blank" rel="noopener">NIELIT Chandigarh</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="single-profile-card" onclick="switchTestimonial(1)">
+              <img src="assets/testimonials/anita_budhiraja.png"
+                   alt="Anita Budhiraja NIELIT" />
+              <div>
+                <h4>Anita Budhiraja</h4>
+                <p>
+                  Scientist-E,<br>
+                  <a href="https://www.nielit.gov.in/chandigarh/index.php" target="_blank" rel="noopener">NIELIT Chandigarh</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="single-profile-card" onclick="switchTestimonial(2)">
+              <img src="assets/testimonials/arti_mehta.png"
+                   alt="Arti Mehta Founder Smiling Walls" />
+              <div>
+                <h4>Arti Mehta</h4>
+                <p>
+                  Founder,<br>
+                  <a href="https://smilingwalls.in/" target="_blank" rel="noopener">Smiling Walls</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="single-profile-card">
-          <br>
-          <img
-            src="assets/testimonials/anita_budhiraja.png"
-            alt="HOD Anita Budhiraja NIELIT University"
-          />
-          <div>
-            <h4>Anita Budhiraja</h4>
-            <br>
-            <p>
-              Scientist-E,
-              <a href=" https://www.nielit.gov.in/chandigarh/index.php "
-                >NIELIT Chandigarh</a
-              > <br>
-            </p>
-          </div>
-        </div>
-        <div class="single-profile-card">
-          <br>
-          <img
-            src="assets/testimonials/arti_mehta.png"
-            alt="Arti Mehta Founder Smiling Walls"
-          />
-          <div>
-            <h4>Arti Mehta</h4>
-            <br>
-            <p>Founder, <a href=" https://smilingwalls.in/ ">Smiling Walls</a></p> 
-          </div>
+        
+        <div class="testimonial-nav">
+          <div class="nav-dot active" onclick="switchTestimonial(0)"></div>
+          <div class="nav-dot" onclick="switchTestimonial(1)"></div>
+          <div class="nav-dot" onclick="switchTestimonial(2)"></div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <footer id="footer" role="contentinfo">
-      <div class="footer-left">
-        <h2>Let's Build Something Amazing Together</h2>
-        <div class="email-form">
-          <h3>Start by <span>saying hi</span></h3>
-          <form id="contactForm" role="form" aria-label="Contact form">
-            <input type="text" name="name" id="name" placeholder="Your name" required aria-label="Your name" />
-            <input type="email" name="email" id="email" placeholder="Email Address" required aria-label="Email address" />
-            <div>
-              <input type="text" name="phone-number" id="phone" placeholder="Type your message" required aria-label="Your message" />
-              <button type="submit" aria-label="Send message">Send</button>
-            </div>
-          </form>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>Let's Build Something Amazing Together</h2>
+          <div class="email-form">
+            <h3>Start by <span>saying hi</span></h3>
+            <form id="contactForm" role="form" aria-label="Contact form">
+              <input type="text" name="name" id="name" placeholder="Your name" required aria-label="Your name" />
+              <input type="email" name="email" id="email" placeholder="Email Address" required aria-label="Email address" />
+              <div class="form-row">
+                <input type="text" name="message" id="message" placeholder="Type your message" required aria-label="Your message" />
+                <button type="submit" aria-label="Send message">Send</button>
+              </div>
+            </form>
+          </div>
+          
+          <div class="footer-title">
+            <h3 class="title-first-name">Lovnish Verma</h3>
+            <h3 class="title-last-name">Support me</h3>
+            <a href="https://www.buymeacoffee.com/lovnishverma" target="_blank" rel="noopener" aria-label="Buy me a coffee">
+              <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                   alt="Buy Me A Coffee"
+                   style="height: 60px !important; width: 217px !important;"
+                   loading="lazy" />
+            </a>
+          </div>
         </div>
-        
-        <div class="footer-title">
-          <h3 class="title-first-name">Lovnish Verma</h3>
-          <h3 class="title-last-name">Support me</h3>
-          <a href="https://www.buymeacoffee.com/lovnishverma" target="_blank" rel="noopener" aria-label="Buy me a coffee">
-            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                 alt="Buy Me A Coffee"
-                 style="height: 60px !important; width: 217px !important;"
-                 loading="lazy" />
-          </a>
-        </div>
-      </div>
 
-      <div class="footer-right">
-        <div class="footer-email-intro">
-          <p>Contact Information</p>
-          <address>
-            <h4>Chandigarh, India</h4>
-            <a href="mailto:princelv84@gmail.com">princelv84@gmail.com</a>
-          </address>
-        </div>
-        
-        <nav class="footer-nav-menu" role="navigation" aria-label="Footer navigation">
-          <ul class="footer-menu">
-            <li><a href="https://wa.me/918894869371" aria-label="Contact via WhatsApp">WhatsApp</a></li>
-            <li><a href="mailto:princelv84@gmail.com" aria-label="Send email">Mail</a></li>
-            <li><a href="tel:8894869371" aria-label="Call phone number">Call</a></li>
-          </ul>
-        </nav>
-        
-        <div class="social-icons" role="list" aria-label="Social media links">
-          <a href="https://www.linkedin.com/in/lovnishverma/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/LovnishVerma" target="_blank" rel="noopener" aria-label="GitHub Profile">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="mailto:princelv84@gmail.com" aria-label="Email contact">
-            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.x.com/lovnishofficial/" target="_blank" rel="noopener" aria-label="Twitter Profile">
-            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/lovnishofficial/" target="_blank" rel="noopener" aria-label="Instagram Profile">
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.facebook.com/lovnishofficial/" target="_blank" rel="noopener" aria-label="Facebook Profile">
-            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-          </a>
+        <div class="footer-right">
+          <div class="footer-email-intro">
+            <p>Contact Information</p>
+            <address>
+              <h4>Chandigarh, India</h4>
+              <a href="mailto:princelv84@gmail.com">princelv84@gmail.com</a>
+            </address>
+          </div>
+          
+          <nav class="footer-nav-menu" role="navigation" aria-label="Footer navigation">
+            <ul class="footer-menu">
+              <li><a href="https://wa.me/918894869371" aria-label="Contact via WhatsApp">WhatsApp</a></li>
+              <li><a href="mailto:princelv84@gmail.com" aria-label="Send email">Mail</a></li>
+              <li><a href="tel:8894869371" aria-label="Call phone number">Call</a></li>
+            </ul>
+          </nav>
+          
+          <div class="social-icons" role="list" aria-label="Social media links">
+            <a href="https://www.linkedin.com/in/lovnishverma/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/LovnishVerma" target="_blank" rel="noopener" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:princelv84@gmail.com" aria-label="Email contact">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.x.com/lovnishofficial/" target="_blank" rel="noopener" aria-label="Twitter Profile">
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/lovnishofficial/" target="_blank" rel="noopener" aria-label="Instagram Profile">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/lovnishofficial/" target="_blank" rel="noopener" aria-label="Facebook Profile">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
     <script>
+      // Fixed WhatsApp redirect function
+      function redirectToWhatsApp() {
+        const phoneNumber = "918894869371";
+        const message = "Hi Lovnish! I'm interested in discussing a project with you.";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+
+      // Service card switching
+      function switchCard(index) {
+        // Remove active class from all cards
+        document.querySelectorAll('.design-card').forEach(card => {
+          card.classList.remove('active');
+        });
+        
+        // Hide all introduction texts
+        document.querySelectorAll('.introduction-text').forEach(text => {
+          text.style.display = 'none';
+        });
+        
+        // Add active class to selected card
+        document.querySelectorAll('.design-card')[index].classList.add('active');
+        
+        // Show corresponding introduction text
+        document.getElementById(`intro-${index}`).style.display = 'block';
+      }
+
+      // Testimonial switching function
+      function switchTestimonial(index) {
+        // Remove active class from all testimonials
+        document.querySelectorAll('.testimonial-card').forEach(card => {
+          card.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.single-profile-card').forEach(profile => {
+          profile.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.nav-dot').forEach(dot => {
+          dot.classList.remove('active');
+        });
+        
+        // Add active class to selected elements
+        document.getElementById(`testimonial-${index}`).classList.add('active');
+        document.querySelectorAll('.single-profile-card')[index].classList.add('active');
+        document.querySelectorAll('.nav-dot')[index].classList.add('active');
+      }
+
+      // Auto-rotate testimonials
+      let testimonialIndex = 0;
+      function autoRotateTestimonials() {
+        testimonialIndex = (testimonialIndex + 1) % 3;
+        switchTestimonial(testimonialIndex);
+      }
+
+      // Start auto-rotation
+      setInterval(autoRotateTestimonials, 5000);
+
+      // Contact form submission
       document.getElementById("contactForm").addEventListener("submit", function (event) {
         event.preventDefault();
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var phone = document.getElementById("phone").value;
-        var message = "Name: " + name + ", Email: " + email + ", Message: " + phone;
-        var phoneNumber = "918894869371";
-        var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-        window.location.href = url;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const messageText = document.getElementById("message").value;
+        const message = `Name: ${name}, Email: ${email}, Message: ${messageText}`;
+        const phoneNumber = "918894869371";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      });
+
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add loading animation
+      window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
       });
     </script>
   </body>
