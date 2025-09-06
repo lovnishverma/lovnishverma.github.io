@@ -499,6 +499,13 @@
       font-weight: bold;
     }
 
+    .project-card-link {
+    text-decoration: none; /* remove underline */
+    color: inherit;        /* keep text color */
+    display: block;        /* make <a> behave like block */
+   }
+
+
     .all-projects p {
       color: #ccc;
       margin-top: 1rem;
@@ -1147,64 +1154,67 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="latest-works" aria-label="Portfolio showcase">
-      <div class="latest-work-title">
-        <h2>Latest Works</h2>
-        <p>Perfect solutions for digital experience</p>
-      </div>
-      
-      <div class="project-card">
-        <div class="title">
-          <h3>
-            <a href="https://lovnishverma-braintumor.hf.space/" 
-               target="_blank" rel="noopener"
-               aria-label="Brain Tumor Prediction AI Model">Brain Tumor Prediction</a>
-          </h3>
-          <div class="tech-stack" role="list" aria-label="Technologies used">
-            <span>TensorFlow, </span>
-            <span>Flask, </span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-        <img src="assets/projectsimg/braintumor.png"
-             alt="Brain Tumor Prediction AI Interface Screenshot"
-             loading="lazy" />
-      </div>
+<section id="latest-works" aria-label="Portfolio showcase">
+  <div class="latest-work-title">
+    <h2>Latest Works</h2>
+    <p>Perfect solutions for digital experience</p>
+  </div>
 
-      <div class="project-card">
-        <div class="title">
-          <h3>
-            <a href="https://lovnishverma-diabetes.hf.space/" 
-               target="_blank" rel="noopener"
-               aria-label="Diabetes Prediction ML Model">Diabetes Prediction</a>
-          </h3>
-          <div class="tech-stack" role="list" aria-label="Technologies used">
-            <span>Streamlit, </span>
-            <span>Scikit-Learn</span>
-            <span>HuggingFace</span>
-          </div>
+  <a href="https://lovnishverma-braintumor.hf.space/" 
+     target="_blank" rel="noopener"
+     aria-label="Brain Tumor Prediction AI Model"
+     class="project-card-link">
+    <div class="project-card">
+      <div class="title">
+        <h3>Brain Tumor Prediction</h3>
+        <div class="tech-stack" role="list" aria-label="Technologies used">
+          <span>TensorFlow, </span>
+          <span>Flask, </span>
+          <span>MongoDB</span>
         </div>
-        <img src="assets/projectsimg/diabetes.png"
-             alt="Diabetes Prediction Model Interface Screenshot"
-             loading="lazy" />
       </div>
+      <img src="assets/projectsimg/braintumor.png"
+           alt="Brain Tumor Prediction AI Interface Screenshot"
+           loading="lazy" />
+    </div>
+  </a>
 
-      <div class="project-card">
-        <div class="title">
-          <h3>
-            <a href="https://lovnishverma-book-recommendations.hf.space/" 
-               target="_blank" rel="noopener"
-               aria-label="Advanced Books Recommender"> Goodreads book recommender</a>
-          </h3>
-          <div class="tech-stack" role="list" aria-label="Technologies used">
-            <span>Gradio, </span>
-            <span>Sentence Transformers</span>
-          </div>
+  <a href="https://lovnishverma-diabetes.hf.space/" 
+     target="_blank" rel="noopener"
+     aria-label="Diabetes Prediction ML Model"
+     class="project-card-link">
+    <div class="project-card">
+      <div class="title">
+        <h3>Diabetes Prediction</h3>
+        <div class="tech-stack" role="list" aria-label="Technologies used">
+          <span>Streamlit, </span>
+          <span>Scikit-Learn</span>
+          <span>HuggingFace</span>
         </div>
-        <img src="assets/projectsimg/books.png"
-             alt="Book recommender Interface Screenshot"
-             loading="lazy" />
       </div>
+      <img src="assets/projectsimg/diabetes.png"
+           alt="Diabetes Prediction Model Interface Screenshot"
+           loading="lazy" />
+    </div>
+  </a>
+
+  <a href="https://lovnishverma-book-recommendations.hf.space/" 
+     target="_blank" rel="noopener"
+     aria-label="Advanced Books Recommender"
+     class="project-card-link">
+    <div class="project-card">
+      <div class="title">
+        <h3>Goodreads Book Recommender</h3>
+        <div class="tech-stack" role="list" aria-label="Technologies used">
+          <span>Gradio, </span>
+          <span>Sentence Transformers</span>
+        </div>
+      </div>
+      <img src="assets/projectsimg/books.png"
+           alt="Book recommender Interface Screenshot"
+           loading="lazy" />
+    </div>
+  </a>
 
       <div class="all-projects">
         <a href="https://github.com/lovnishVerma" target="_blank" rel="noopener" aria-label="View all open source projects on GitHub">
