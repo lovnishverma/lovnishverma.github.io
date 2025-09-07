@@ -63,12 +63,12 @@ lovnishverma.github.io/
 
 ### AI/ML Projects
 * 🧠 [Brain Tumor Prediction (Hugging Face)](https://huggingface.co/spaces/LovnishVerma/braintumor) - Deep learning model for medical imaging
-* 🩺 [Diabetes Prediction App](https://predictdiabetes.glitch.me/) - ML-powered health assessment tool
+* 🩺 [Diabetes Prediction App](https://lovnishverma-diabetes.hf.space/) - ML-powered health assessment tool
+* 📚 [Advanced Goodreads Recommender](https://lovnishverma-book-recommendations.hf.space/) - Discover your next favorite book with AI-powered recommendations
 * 📝 [Flask To-Do Notes App](https://flaskmongo.glitch.me/) - Full-stack web application
 
 ### Development Repositories
-* 💻 [All Open Source Projects](https://github.com/LovnishVerma) - 100+ repositories
-* 🎮 [Live Demo Gallery (Glitch)](https://glitch.com/@lovnishverma) - Interactive demos
+* 💻 [All Open Source Projects](https://github.com/LovnishVerma) - 120+ repositories
 
 ---
 
