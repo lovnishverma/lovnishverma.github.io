@@ -539,10 +539,25 @@
         }
 
       /* Portfolio Section */
-    #latest-works {
-      padding: 4rem 2rem;
-      background: #0a0a0a;
-    }
+   #latest-works {
+  display: grid;
+  grid-template-columns: 1fr;   /* Default: single column (mobile) */
+  gap: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  #latest-works {
+    grid-template-columns: 1fr 1fr; /* Two columns on tablets/desktops */
+  }
+}
+
+@media (min-width: 1200px) {
+  #latest-works {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns on big screens */
+  }
+}
+
 
     .latest-work-title {
       text-align: center;
