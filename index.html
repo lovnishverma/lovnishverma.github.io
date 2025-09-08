@@ -1614,6 +1614,49 @@
     </footer>
 
     <script>
+
+        let currentIndex = 0;
+  let autoSwitchInterval;
+
+  function showCard(index) {
+    // Get all cards and intros
+    const cards = document.querySelectorAll(".design-card");
+    const intros = document.querySelectorAll(".introduction-text");
+
+    // Reset active states
+    cards.forEach((card, i) => {
+      card.classList.remove("active");
+      intros[i].style.display = "none";
+    });
+
+    // Activate selected card and intro
+    cards[index].classList.add("active");
+    intros[index].style.display = "block";
+
+    currentIndex = index;
+  }
+
+  function switchCard(index) {
+    showCard(index);
+    resetAutoSwitch(); // Restart auto switching if user clicks manually
+  }
+
+  function autoSwitch() {
+    currentIndex = (currentIndex + 1) % document.querySelectorAll(".design-card").length;
+    showCard(currentIndex);
+  }
+
+  function resetAutoSwitch() {
+    clearInterval(autoSwitchInterval);
+    autoSwitchInterval = setInterval(autoSwitch, 5000); // auto switch every 5 sec
+  }
+
+  // Start auto switching on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    resetAutoSwitch();
+  });
+
+      
         // JavaScript with modern animations and interactions
         gsap.registerPlugin(ScrollTrigger);
 
