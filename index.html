@@ -632,6 +632,23 @@
     display: block;        /* make <a> behave like block */
    }
 
+    .project-card-link img {
+  width: 100%;              /* Make image take full width of container */
+  height: auto;             /* Maintain aspect ratio */
+  max-width: 600px;         /* Optional: prevent overly large images */
+  border-radius: 10px;      /* Rounded corners for better look */
+  display: block;           /* Removes inline gaps */
+  margin: 0 auto;           /* Center the image */
+  object-fit: cover;        /* Ensures image doesn’t stretch */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Nice shadow */
+  transition: transform 0.3s ease;
+}
+
+.project-card-link img:hover {
+  transform: scale(1.05);   /* Subtle zoom effect on hover (desktop only) */
+}
+
+
    .github-btn-container {
     margin-top: 12px;
     text-align: center;
@@ -1389,7 +1406,7 @@
                         <span>Deep Learning</span>
                     </div>
                 </div>
-                <p>
+                <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
                     Advanced deep learning model for brain tumor detection using CNN architecture.
                     Features real-time image analysis with 95%+ accuracy rate and intuitive web interface
                     for medical professionals.
@@ -1424,7 +1441,7 @@
                         <span>ML Analytics</span>
                     </div>
                 </div>
-                <p>
+                <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
                     Machine learning-powered diabetes prediction system using ensemble methods.
                     Provides risk assessment with detailed analytics and personalized health recommendations
                     based on clinical parameters.
@@ -1459,7 +1476,7 @@
                         <span>Recommendation AI</span>
                     </div>
                 </div>
-                <p>
+                <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
                     Intelligent book recommendation system using advanced NLP and similarity algorithms.
                     Analyzes reading preferences and book metadata to suggest personalized reading lists
                     from Goodreads database.
@@ -1494,7 +1511,7 @@
                         <span>Tailwind CSS</span>
                     </div>
                 </div>
-                <p>
+                <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
                     Employee Location Tracking using Firestore you can Track, View & Manage Employee Location Data with Firebase Firestore and Google Maps Integration. Suitable for any department, remote teams, or organization-wide tracking.
                 </p>
                 <img src="assets/projectsimg/location.png"
@@ -1521,7 +1538,7 @@
                 aria-label="View all open source projects on GitHub">
                 <h3>EXPLORE ALL PROJECTS</h3>
             </a>
-            <p>
+            <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
                 Discover my complete portfolio of AI/ML projects, web applications, and innovative solutions.<br />
                 From neural networks to full-stack applications - <br>
                 <a href="https://github.com/lovnishverma" target="_blank" rel="noopener">explore my GitHub
