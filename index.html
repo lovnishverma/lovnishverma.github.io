@@ -1075,7 +1075,7 @@
           <p>Data Scientist</p>
         </div>
         <div class="body-title">
-          <h2>Transforming Data into <br />Intelligence</h2>
+          <h2></h2>
           <p>
             I specialize in building intelligent systems,<br />extracting
             insights from data, and solving complex problems using AI and
@@ -1858,27 +1858,26 @@
         });
 
         // Add typing effect to main title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
         }
+    }
+    type();
+}
 
-        // Initialize typing effect after load
-        setTimeout(() => {
-            const titleElement = document.querySelector('.body-title h2');
-            if (titleElement) {
-                const originalText = titleElement.textContent;
-                typeWriter(titleElement, originalText, 50);
-            }
-        }, 1500);
+       // Initialize typing effect after load
+setTimeout(() => {
+    const titleElement = document.querySelector('.body-title h2');
+    if (titleElement) {
+        typeWriter(titleElement, "Transforming Data into Intelligence", 50);
+    }
+}, 500); // shorter delay so it starts quickly
 
         // Add cursor pointer to clickable elements
         document.querySelectorAll('.design-card, .single-profile-card, .nav-dot').forEach(el => {
