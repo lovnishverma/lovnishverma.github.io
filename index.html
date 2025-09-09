@@ -584,12 +584,20 @@
         max-width: 1200px; 
         margin: 0 auto; 
     }
+      
+    /* Mobile Fix for Testimonials */
+@media (max-width: 768px) {
+  .testimonial-content {
+    flex-direction: column;   /* stack vertically instead of row */
+    align-items: center;      /* center cards */
+  }
 
-    .testimonial-content {
+
+/*     .testimonial-content {
       display: flex;
       gap: 2rem;
       align-items: stretch;
-    }
+    } */
 
 /*     .testimonial-cards {
       flex: 2;
@@ -601,8 +609,9 @@
 .testimonial-cards {
   flex: 2;
   position: relative;
-  min-height: 350px; /* make it a bit taller */
-  overflow: visible; /* let content show fully */
+  min-height: auto;
+  overflow: visible;
+  width: 100%; 
 }
 
 
@@ -612,7 +621,7 @@
       border-radius: 20px;
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
