@@ -1,6 +1,6 @@
 # 🌐 Lovnish Verma – Personal Portfolio Website
 
-Welcome to the source code repository for my personal website: [lovnishverma.github.io](https://lovnishverma.github.io)
+Welcome to the source code repository for my personal website: [lovnishverma.github.io](https://lovnishverma.github.io)  or [lovnishverma.in](https://www.lovnishverma.in/)
 
 This is a fully responsive and SEO-optimized portfolio site designed using **HTML, CSS, and JavaScript**. It highlights my expertise in AI, ML, and full-stack development with live projects, contact integration, and advanced metadata for better discovery.
 
@@ -68,7 +68,7 @@ lovnishverma.github.io/
 * 📝 [Flask To-Do Notes App](https://flaskmongo.glitch.me/) - Full-stack web application
 
 ### Development Repositories
-* 💻 [All Open Source Projects](https://github.com/LovnishVerma) - 120+ repositories
+* 💻 [All Open Source Projects](https://github.com/LovnishVerma) - 140+ repositories
 
 ---
 
