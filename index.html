@@ -988,7 +988,8 @@
         ========================================
         */
         #footer {
-            background: #050505;
+            background: var(--surface);
+
             padding: 5rem 0 2rem;
             border-top: 1px solid var(--border-color);
         }
@@ -1425,14 +1426,21 @@
                 bottom: 80px;
             }
         }
+
+        /* is is to stop the shaking */
+        #typed-text {
+            display: inline-block;
+            min-height: 1.2em;
+            /* Reserves space for the line even when empty */
+            vertical-align: bottom;
+            /* Keeps alignment with the previous text */
+        }
     </style>
 </head>
 
 <body>
     <!-- 
-    ========================================
     LOADER
-    ========================================
     -->
     <div id="page-loader">
         <div class="loader-spinner"></div>
