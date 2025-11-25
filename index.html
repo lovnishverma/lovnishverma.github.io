@@ -33,7 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <style>
+       <style>
         /*
         CORE VARIABLES & THEME CONFIGURATION
         */
@@ -110,6 +110,9 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
+            /* Prevent horizontal scroll rubber-banding */
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -118,6 +121,7 @@
             color: var(--text-primary);
             background-color: var(--background);
             overflow-x: hidden;
+            width: 100%;
             transition: background-color var(--transition-normal), color var(--transition-normal);
         }
 
@@ -1350,7 +1354,8 @@
                 transform: scale(0.65);
             }
 
-            .service-tabs {
+            /* Force 1 column grid on mobile to prevent overflow */
+            .service-tabs, .projects-grid, .blog-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1379,7 +1384,7 @@
 
             /* Adjust padding for container on mobile */
             .container {
-                padding: 0 1.5rem;
+                padding: 0 1rem;
             }
         }
 
