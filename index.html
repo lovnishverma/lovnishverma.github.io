@@ -1486,9 +1486,7 @@
     </header>
 
     <!-- 
-    ========================================
     MAIN CONTENT
-    ========================================
     -->
     <main>
         <!-- HERO SECTION -->
@@ -1521,12 +1519,12 @@
                         </div>
                     </div>
 
-                    <!-- RESTORED ORBIT ANIMATION WITH SVG ICONS -->
+                    <!-- ORBIT ANIMATION WITH SVG ICONS -->
                     <div class="hero-visual">
                         <div class="orbit-container">
                             <div class="profile-center"></div>
                             <div class="orbit-ring">
-                                <!-- Using original SVG assets as requested -->
+                                <!-- Using some original SVG assets -->
                                 <div class="tech-icon" style="--i:1"><img src="assets/SVGIcons/python.svg" alt="Python"
                                         onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'">
                                 </div>
@@ -1959,7 +1957,7 @@
                 </div>
 
                 <div id="blog-container" class="blog-grid">
-                    <!-- Dynamic content will be loaded here -->
+                    <!-- Dynamic blogs from medium will be loaded here -->
                     <div class="loading-blogs">
                         <i class="fas fa-circle-notch fa-spin"></i> Fetching latest articles...
                     </div>
@@ -2075,7 +2073,7 @@
     </main>
 
     <!-- 
-    FOOTER (ORIGINAL LAYOUT)
+    FOOTER
     -->
     <footer id="footer">
         <div class="footer-grid">
@@ -2138,9 +2136,7 @@
     </footer>
 
     <!-- 
-    ========================================
     OVERLAYS
-    ========================================
     -->
 
     <!-- Cookie Banner -->
@@ -2169,20 +2165,18 @@
     </button>
 
     <!-- 
-    ========================================
     JAVASCRIPT LOGIC
-    ========================================
     -->
     <script>
-        // --- CONFIGURATION ---
+        //  CONFIGURATION
         const CONFIG = {
             MEDIUM_USER: 'lovnishverma', // Fallback
-            MEDIUM_RSS_URL: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@lovnish', // Using @lovnish based on request
+            MEDIUM_RSS_URL: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@lovnish', // For fetching latest blogs of @lovnish
             TOAST_DURATION: 3000,
             TYPING_SPEED: 100
         };
 
-        // --- INIT ---
+        // INIT
         document.addEventListener('DOMContentLoaded', () => {
             initLoader();
             initTheme();
@@ -2194,7 +2188,7 @@
             initMobileMenu();
         });
 
-        // --- 1. LOADER ---
+        // 1. LOADER
         function initLoader() {
             const loader = document.getElementById('page-loader');
             setTimeout(() => {
@@ -2203,7 +2197,7 @@
             }, 800);
         }
 
-        // --- 2. THEME HANDLING ---
+        // 2. THEME HANDLING
         function initTheme() {
             const toggle = document.getElementById('themeToggle');
             const icon = toggle.querySelector('i');
@@ -2228,7 +2222,7 @@
             });
         }
 
-        // --- 3. MOBILE MENU HANDLING ---
+        // 3. MOBILE MENU HANDLING
         function initMobileMenu() {
             const btn = document.getElementById('mobileMenuBtn');
             const menu = document.getElementById('navbarMenu');
@@ -2255,7 +2249,7 @@
             }
         }
 
-        // --- 4. TYPING EFFECT ---
+        // 4. TYPING EFFECT
         function initTypingEffect() {
             const texts = ["Intelligence.", "Solutions.", "Future."];
             const element = document.getElementById('typed-text');
@@ -2288,7 +2282,7 @@
             type();
         }
 
-        // --- 5. MEDIUM BLOG FETCH ---
+        // 5. MEDIUM BLOG FETCH
         async function fetchMediumBlogs() {
             const container = document.getElementById('blog-container');
 
@@ -2358,7 +2352,7 @@
             }
         }
 
-        // --- 6. SERVICE TABS ---
+        // 6. SERVICE TABS
         function switchService(index) {
             // Update Cards
             document.querySelectorAll('.service-card').forEach((card, i) => {
@@ -2373,7 +2367,7 @@
             });
         }
 
-        // --- 7. PROJECT FILTERS ---
+        // 7. PROJECT FILTERS
         function filterProjects(cat, btn) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -2391,7 +2385,7 @@
             });
         }
 
-        // --- 8. TOAST NOTIFICATIONS ---
+        // 8. TOAST NOTIFICATIONS
         function showToast(message, type = 'success') {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
@@ -2423,7 +2417,7 @@
             }, 1500);
         }
 
-        // --- 9. SLIDER & SCROLL ---
+        // 9. SLIDER & SCROLL
         let currentSlide = 0;
         function setSlide(index) {
             const slides = document.querySelectorAll('.testimonial-slide');
@@ -2465,7 +2459,7 @@
             });
         }
 
-        // --- 10. COOKIES ---
+        // 10. COOKIES
         function checkCookies() {
             if (!localStorage.getItem('cookiesAccepted')) {
                 setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 2000);
