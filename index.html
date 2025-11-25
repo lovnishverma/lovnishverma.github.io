@@ -33,7 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-       <style>
+    <style>
         /*
         CORE VARIABLES & THEME CONFIGURATION
         */
@@ -1355,7 +1355,9 @@
             }
 
             /* Force 1 column grid on mobile to prevent overflow */
-            .service-tabs, .projects-grid, .blog-grid {
+            .service-tabs,
+            .projects-grid,
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1750,6 +1752,35 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 5 (Hostel Gatepass) -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img-wrapper">
+                            <img src="https://img.youtube.com/vi/Skr2YWeDOFk/maxresdefault.jpg"
+                                alt="Hostel Gatepass Management System" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/222/FFF?text=Hostel+Gatepass'">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Hostel Gatepass Management System</h3>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">HTML/CS/JS</span>
+                            </div>
+                            <p class="project-desc">
+                                About
+                                A comprehensive digital solution for managing student hostel gatepasses with QR code
+                                scanning, multi-level approvals, and real-time tracking.
+                            </p>
+                            <div class="project-footer">
+                                <a href="https://hostel.gamer.gd/" target="_blank"
+                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
+                                <a href="https://github.com/lovnishverma/Hostel-Gatepass-Management-System"
+                                    class="btn-code"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
