@@ -2756,6 +2756,96 @@
             document.getElementById('cookie-banner').classList.remove('show');
         }
     </script>
+    <script>
+        // GOOGLE ANALYTICS EVENT TRACKING
+        // Track Resume Downloads
+        document.querySelector('.btn-download').addEventListener('click', function () {
+            gtag('event', 'download_resume', {
+                'event_category': 'engagement',
+                'event_label': 'Resume PDF'
+            });
+        });
+
+        // Track Project Views
+        document.querySelectorAll('.project-card a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
+                gtag('event', 'view_project', {
+                    'event_category': 'engagement',
+                    'event_label': projectTitle,
+                    'value': 1
+                });
+            });
+        });
+
+        // Track Contact Form Submissions
+        function handleContact(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            // Track form submission
+            gtag('event', 'contact_form_submit', {
+                'event_category': 'engagement',
+                'event_label': 'Footer Contact Form'
+            });
+
+            setTimeout(() => {
+                showToast('Message sent successfully!');
+                e.target.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }, 1500);
+        }
+
+        // Track Social Media Clicks
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('click', function () {
+                const platform = this.querySelector('i').className.split('fa-')[1];
+                gtag('event', 'social_click', {
+                    'event_category': 'engagement',
+                    'event_label': platform,
+                    'value': 1
+                });
+            });
+        });
+
+        // Track WhatsApp Click
+        document.querySelector('.whatsapp-float').addEventListener('click', function () {
+            gtag('event', 'whatsapp_click', {
+                'event_category': 'engagement',
+                'event_label': 'Floating Button'
+            });
+        });
+
+        // Track Section Views (Scroll Tracking)
+        const sections = ['services', 'experience', 'portfolio', 'blog', 'testimonials'];
+        const sectionTracked = {};
+
+        function trackSectionView() {
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section || sectionTracked[sectionId]) return;
+
+                const rect = section.getBoundingClientRect();
+                const isVisible = rect.top >= 0 && rect.top <= window.innerHeight / 2;
+
+                if (isVisible && !sectionTracked[sectionId]) {
+                    sectionTracked[sectionId] = true;
+                    gtag('event', 'section_view', {
+                        'event_category': 'engagement',
+                        'event_label': sectionId
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', trackSectionView);
+
+    </script>
+
 </body>
 
 </html>
