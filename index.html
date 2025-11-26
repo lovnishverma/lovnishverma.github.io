@@ -619,6 +619,123 @@
             display: block;
         }
 
+        /* --- EXPERIENCE (TIMELINE) --- */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* The vertical line */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: var(--dark);
+            border: 3px solid var(--primary);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 28px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--border);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--border);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 28px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--border);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--border) transparent transparent;
+        }
+
+        .right::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 20px 25px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            backdrop-filter: blur(5px);
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: var(--primary-dim);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h4 {
+            color: var(--secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .timeline-content ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .timeline-content li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
         /*
         PROJECTS SECTION
         */
@@ -880,9 +997,8 @@
             transform: scale(1.02);
         }
 
-        /* ========================================
+        /*
         TESTIMONIALS
-        ========================================
         */
         #testimonials {
             padding: 6rem 0;
@@ -982,9 +1098,8 @@
             transform: scale(1.2);
         }
 
-        /* ========================================
+        /*
         FOOTER
-        ========================================
         */
         #footer {
             background: var(--surface);
@@ -1103,9 +1218,8 @@
             transform: translateY(-3px);
         }
 
-        /* ========================================
+        /*
         EXTRAS: TOAST, MODAL, BUTTONS
-        ========================================
         */
         .toast-container {
             position: fixed;
@@ -1280,9 +1394,8 @@
             }
         }
 
-        /* ========================================
+        /*
         RESPONSIVE DESIGN (UPDATED)
-        ========================================
         */
         @media (max-width: 1024px) {
             .hero-container {
@@ -1625,6 +1738,66 @@
                             Data is the new oil, but only if you can refine it. I help businesses unlock hidden patterns
                             to drive decision-making and optimize operations.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Career Path</span> <br>
+                    <h2 class="section-title">Professional Experience & Career Journey</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <span class="timeline-date">May 2024 - Present</span>
+                            <h3>Software Development Engineer</h3>
+                            <h4>NIELIT (Govt. of India)</h4>
+                            <ul>
+                                <li>Built API gateways in .NET Core handling 500+ concurrent requests.</li>
+                                <li>Implemented AES encryption for 30,000+ confidential documents per exam cycle.</li>
+                                <li>Developed VS Code extensions using TypeScript to boost developer productivity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2024</span>
+                            <h3>Web Development Intern</h3>
+                            <h4>NIELIT</h4>
+                            <ul>
+                                <li>Automated ID card generation using Python & OpenCV, reducing manual work by 90%.
+                                </li>
+                                <li>Published research on Generative AI & NLP in Springer conferences.</li>
+                                <li>Deployed Alumni Portal and LMS systems using Django and PostgreSQL.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2019 - 2023</span>
+                            <h3>B.Tech - Computer Science</h3>
+                            <h4>BPIT, Delhi</h4>
+                            <ul>
+                                <li>CGPA: 8.7/10</li>
+                                <li>Focus: Data Structures, Algorithms, DBMS, and Software Engineering.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - 2023</span>
+                            <h3>Freelance Web Developer</h3>
+                            <h4>Remote / Self-Employed</h4>
+                            <ul>
+                                <li>Developed responsive websites for small businesses using HTML, CSS, and JavaScript.
+                                </li>
+                                <li>Delivered custom solutions for local clients, improving their digital presence.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
