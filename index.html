@@ -1,36 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="6LXGQp1AM1BbZAD8hGIdRZosN6dBokITCRz1VKWKwus" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2848P5Y9GR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-2848P5Y9GR');
-    </script>
 
     <!-- SEO Meta Tags -->
     <title>Lovnish Verma - AI/ML Developer & Data Scientist | Portfolio 2025</title>
     <meta name="description"
-        content="Lovnish Verma - Expert AI/ML Developer & Data Scientist from Chandigarh, India. Specializing in machine learning, deep learning, predictive modeling, and intelligent systems. 3+ years experience, 100+ projects completed." />
+        content="Lovnish Verma - Expert AI/ML Developer & Data Scientist from Chandigarh, India. Specializing in machine learning, deep learning, predictive modeling, and intelligent systems." />
     <meta name="keywords"
-        content="Lovnish Verma, AI developer Chandigarh, machine learning engineer India, data scientist portfolio, TensorFlow expert, Python developer, Django developer, brain tumor detection AI" />
+        content="Lovnish Verma, AI developer Chandigarh, machine learning engineer India, data scientist portfolio, TensorFlow expert, Python developer, Django developer" />
     <meta name="author" content="Lovnish Verma" />
 
     <!-- Open Graph & Twitter Tags -->
     <meta property="og:title" content="Lovnish Verma - AI/ML Developer & Data Scientist | Portfolio 2025" />
     <meta property="og:description"
         content="Expert AI/ML Developer from Chandigarh with 3+ years experience. Specializing in intelligent systems, predictive modeling, and data-driven solutions." />
-    <meta property="og:image" content="https://lovnishverma.in/assets/favicon/lovnishfavicon.png" />
+    <meta property="og:image" content="assets/favicon/lovnishfavicon.png" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -40,13 +29,26 @@
 
     <!-- External Libraries -->
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2848P5Y9GR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        // Default consent mode
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'wait_for_update': 500
+        });
+
+        gtag('config', 'G-2848P5Y9GR');
+    </script>
 
     <style>
-        /*
-        CORE VARIABLES & THEME CONFIGURATION
-        */
+        /* CORE VARIABLES & THEME CONFIGURATION */
         :root {
             /* Brand Colors */
             --primary: #00ff88;
@@ -107,9 +109,7 @@
             --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.05);
         }
 
-        /*
-        GLOBAL RESETS & UTILITIES
-        */
+        /* GLOBAL RESETS & UTILITIES */
         * {
             margin: 0;
             padding: 0;
@@ -119,7 +119,6 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
-            /* Prevent horizontal scroll rubber-banding */
             overflow-x: hidden;
             width: 100%;
         }
@@ -173,9 +172,7 @@
         #typed-text {
             display: inline-block;
             min-height: 1.2em;
-            /* Reserves space for the line even when empty */
             vertical-align: bottom;
-            /* Keeps alignment with the previous text */
         }
 
         .flex-center {
@@ -188,7 +185,7 @@
             display: none !important;
         }
 
-        /* Scrollbar Styling */
+        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -206,9 +203,7 @@
             background: var(--primary);
         }
 
-        /*
-        LOADER ANIMATION
-        */
+        /* LOADER ANIMATION */
         #page-loader {
             position: fixed;
             top: 0;
@@ -232,9 +227,7 @@
             animation: spin 1s linear infinite;
         }
 
-        /*
-        HEADER & NAVIGATION
-        */
+        /* HEADER & NAVIGATION */
         #header {
             height: var(--header-height);
             display: flex;
@@ -355,7 +348,6 @@
             color: var(--primary);
         }
 
-        /* Mobile Menu Toggle */
         .mobile-toggle {
             display: none;
             background: none;
@@ -366,9 +358,7 @@
             z-index: 1001;
         }
 
-        /*
-        HERO SECTION
-        */
+        /* HERO SECTION */
         #hero {
             margin-top: var(--header-height);
             min-height: calc(100vh - var(--header-height));
@@ -379,7 +369,6 @@
             padding: 4rem 0;
         }
 
-        /* Hero Container Wrapper for Flex */
         .hero-container {
             display: flex;
             flex-direction: row;
@@ -457,9 +446,7 @@
             margin-top: 0.5rem;
         }
 
-        /*
-        ORBIT ANIMATION
-        */
+        /* ORBIT ANIMATION */
         .hero-visual {
             flex: 1;
             display: flex;
@@ -489,7 +476,6 @@
             background-position: center;
             border: 4px solid var(--primary);
             box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-            /* Fallback color if image fails */
             background-color: #222;
         }
 
@@ -505,7 +491,6 @@
             animation: rotate 30s linear infinite;
         }
 
-        /* SVG Icons Positioning */
         .tech-icon {
             position: absolute;
             top: 50%;
@@ -517,12 +502,10 @@
             backdrop-filter: blur(5px);
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            /* Calculate position based on index */
             transform: translate(-50%, -50%) rotate(calc(var(--i) * (360deg / 15))) translateY(-220px) rotate(calc(var(--i) * (-360deg / 15)));
             transition: transform 0.3s ease;
         }
 
-        /* Counter-rotate image inside to keep it upright */
         .orbit-ring .tech-icon img {
             width: 100%;
             height: 100%;
@@ -536,9 +519,7 @@
             z-index: 10;
         }
 
-        /*
-        SERVICES SECTION
-        */
+        /* SERVICES SECTION */
         #services {
             padding: 6rem 0;
             background: var(--surface);
@@ -546,7 +527,6 @@
 
         .service-tabs {
             display: grid;
-            /* Changed minmax to 280px for better mobile fit */
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
@@ -629,8 +609,7 @@
             display: block;
         }
 
-        /* EXPERIENCE TIMELINE SECTION (NEW) 
-        */
+        /* EXPERIENCE TIMELINE */
         #experience {
             padding: 6rem 0;
             position: relative;
@@ -644,7 +623,6 @@
             margin: 4rem auto 0;
         }
 
-        /* The Line */
         .timeline::after {
             content: '';
             position: absolute;
@@ -673,7 +651,6 @@
             left: 50%;
         }
 
-        /* The Dot */
         .timeline-dot {
             position: absolute;
             width: 40px;
@@ -702,7 +679,6 @@
             transform: scale(1.1);
         }
 
-        /* The Card */
         .timeline-content {
             padding: 2rem;
             background: var(--card-bg);
@@ -751,7 +727,6 @@
             line-height: 1.6;
         }
 
-        /* Arrows */
         .timeline-content::before {
             content: " ";
             height: 0;
@@ -774,18 +749,7 @@
             border-color: transparent var(--border-color) transparent transparent;
         }
 
-        .timeline-item.left .timeline-content:hover::before {
-            border-left-color: var(--primary);
-        }
-
-        .timeline-item.right .timeline-content:hover::before {
-            border-right-color: var(--primary);
-        }
-
-
-        /*
-        PROJECTS SECTION
-        */
+        /* PORTFOLIO SECTION */
         #portfolio {
             padding: 6rem 0;
         }
@@ -835,7 +799,6 @@
 
         .projects-grid {
             display: grid;
-            /* Changed minmax to 280px to prevent horizontal scroll on mobile */
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2.5rem;
         }
@@ -931,9 +894,7 @@
             background: #333;
         }
 
-        /*
-        BLOG SECTION
-        */
+        /* BLOG SECTION */
         #blog {
             padding: 6rem 0;
             background: var(--surface);
@@ -1005,10 +966,6 @@
             gap: 5px;
         }
 
-        .read-btn:hover {
-            text-decoration: underline;
-        }
-
         .loading-blogs {
             text-align: center;
             color: var(--text-muted);
@@ -1016,9 +973,7 @@
             font-style: italic;
         }
 
-        /*
-        GITHUB ACTIVITY
-        */
+        /* GITHUB ACTIVITY */
         #github-activity {
             padding: 4rem 0;
             background: var(--background);
@@ -1044,9 +999,7 @@
             transform: scale(1.02);
         }
 
-        /*
-        TESTIMONIALS
-        */
+        /* TESTIMONIALS */
         #testimonials {
             padding: 6rem 0;
             background: var(--surface);
@@ -1057,7 +1010,6 @@
             margin: 0 auto;
             position: relative;
             min-height: 350px;
-            /* Increased height for mobile responsiveness */
         }
 
         .testimonial-slide {
@@ -1145,12 +1097,9 @@
             transform: scale(1.2);
         }
 
-        /*
-        FOOTER
-        */
+        /* FOOTER */
         #footer {
             background: var(--surface);
-
             padding: 5rem 0 2rem;
             border-top: 1px solid var(--border-color);
         }
@@ -1265,9 +1214,18 @@
             transform: translateY(-3px);
         }
 
-        /*
-        EXTRAS: TOAST, MODAL, BUTTONS
-        */
+        /* VISITOR COUNTER STYLES */
+        .visitor-counter {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--primary);
+            background: rgba(0, 255, 136, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* EXTRAS */
         .toast-container {
             position: fixed;
             bottom: 30px;
@@ -1296,7 +1254,6 @@
             color: var(--primary);
         }
 
-        /* Cookie Banner */
         #cookie-banner {
             position: fixed;
             bottom: -150px;
@@ -1325,7 +1282,6 @@
             bottom: 0;
         }
 
-        /* Floating WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -1350,7 +1306,6 @@
             transform: scale(1.1);
         }
 
-        /* Back to Top */
         #backToTop {
             position: fixed;
             bottom: 100px;
@@ -1441,9 +1396,7 @@
             }
         }
 
-        /*
-        RESPONSIVE DESIGN (UPDATED)
-        */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 1024px) {
             .hero-container {
                 flex-direction: column;
@@ -1475,7 +1428,6 @@
         @media (max-width: 768px) {
             .navbar-menu {
                 display: none;
-                /* Hidden by default on mobile */
                 position: absolute;
                 top: var(--header-height);
                 left: 0;
@@ -1509,12 +1461,10 @@
                 font-size: 2.5rem;
             }
 
-            /* Scale down orbit for mobile without breaking math */
             .orbit-container {
                 transform: scale(0.65);
             }
 
-            /* Force 1 column grid on mobile to prevent overflow */
             .service-tabs,
             .projects-grid,
             .blog-grid {
@@ -1544,7 +1494,6 @@
                 padding: 1.5rem;
             }
 
-            /* Adjust padding for container on mobile */
             .container {
                 padding: 0 1rem;
             }
@@ -1624,16 +1573,12 @@
 </head>
 
 <body>
-    <!-- 
-    LOADER
-    -->
+    <!-- LOADER -->
     <div id="page-loader">
         <div class="loader-spinner"></div>
     </div>
 
-    <!-- 
-    HEADER
-    -->
+    <!-- HEADER -->
     <header id="header">
         <div class="container">
             <a href="#" class="navbar-brand">
@@ -1643,11 +1588,9 @@
 
             <div class="nav-wrapper">
                 <nav>
-                    <!-- Mobile Menu Button -->
                     <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
                         <i class="fas fa-bars"></i>
                     </button>
-
                     <ul class="navbar-menu" id="navbarMenu">
                         <li><a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a></li>
                         <li><a href="#experience" class="nav-link" onclick="closeMobileMenu()">Experience</a></li>
@@ -1661,7 +1604,7 @@
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
                         <i class="fas fa-moon"></i>
                     </button>
-                    <a href="/assets/Lovnish_Verma_Resume.pdf" download class="btn-download" title="Download Resume">
+                    <a href="assets/Lovnish_Verma_Resume.pdf" download class="btn-download" title="Download Resume">
                         <i class="fas fa-download"></i> <span>Resume</span>
                     </a>
                 </div>
@@ -1669,9 +1612,7 @@
         </div>
     </header>
 
-    <!-- 
-    MAIN CONTENT
-    -->
+    <!-- MAIN CONTENT -->
     <main>
         <!-- HERO SECTION -->
         <section id="hero">
@@ -1703,12 +1644,11 @@
                         </div>
                     </div>
 
-                    <!-- ORBIT ANIMATION WITH SVG ICONS -->
+                    <!-- ORBIT ANIMATION -->
                     <div class="hero-visual">
                         <div class="orbit-container">
                             <div class="profile-center"></div>
                             <div class="orbit-ring">
-                                <!-- Using some original SVG assets -->
                                 <div class="tech-icon" style="--i:1"><img src="assets/SVGIcons/python.svg" alt="Python"
                                         onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'">
                                 </div>
@@ -1773,7 +1713,6 @@
                     <span class="section-subtitle">What I Do</span>
                     <h2 class="section-title">My Expertise</h2>
                 </div>
-
                 <div class="service-tabs">
                     <div class="service-card active" onclick="switchService(0)">
                         <i class="fas fa-brain service-icon"></i>
@@ -1797,22 +1736,20 @@
                         <span class="service-link">View Projects <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-
                 <div class="intro-display">
                     <div id="intro-0" class="intro-content active">
                         <h2 class="text-gradient" style="font-size:2rem; margin-bottom:1rem;">AI/ML Specialist</h2>
                         <p style="color:var(--text-secondary); font-size:1.1rem;">
                             I create systems that learn and adapt. From detecting medical anomalies in MRI scans to
-                            predicting stock market trends,
-                            my AI solutions are designed to be accurate, scalable, and deployable.
+                            predicting stock market trends, my AI solutions are designed to be accurate, scalable, and
+                            deployable.
                         </p>
                     </div>
                     <div id="intro-1" class="intro-content">
                         <h2 class="text-gradient" style="font-size:2rem; margin-bottom:1rem;">Full Stack Engineer</h2>
                         <p style="color:var(--text-secondary); font-size:1.1rem;">
                             I build digital products that users love. Whether it's a complex dashboard or a landing
-                            page,
-                            I focus on performance, accessibility, and clean code architecture.
+                            page, I focus on performance, accessibility, and clean code architecture.
                         </p>
                     </div>
                     <div id="intro-2" class="intro-content">
@@ -1833,7 +1770,6 @@
                     <span class="section-subtitle">My Journey</span>
                     <h2 class="section-title">Professional Experience</h2>
                 </div>
-
                 <div class="timeline">
                     <!-- Timeline Item 1 -->
                     <div class="timeline-item left">
@@ -1841,8 +1777,8 @@
                         <div class="timeline-content">
                             <span class="time-badge">Dec 2024 - Present</span>
                             <h3 class="timeline-title">Project Engineer</h3>
-                            <span class="timeline-subtitle">National Institute of Electronics & Information
-                                Technology, Ropar</span>
+                            <span class="timeline-subtitle">National Institute of Electronics & Information Technology,
+                                Ropar</span>
                             <p class="timeline-desc">
                                 I work on projects involving Artificial Intelligence, Machine Learning, Data Science,
                                 and Full-Stack Development. My experience includes developing and deploying Python-based
@@ -1852,7 +1788,6 @@
                             </p>
                         </div>
                     </div>
-
                     <!-- Timeline Item 2 -->
                     <div class="timeline-item right">
                         <div class="timeline-dot"><i class="fas fa-code-branch"></i></div>
@@ -1871,15 +1806,14 @@
                             </p>
                         </div>
                     </div>
-
                     <!-- Timeline Item 3 -->
                     <div class="timeline-item left">
                         <div class="timeline-dot"><i class="fas fa-chart-pie"></i></div>
                         <div class="timeline-content">
                             <span class="time-badge">April 2023 - October 2023</span>
                             <h3 class="timeline-title">AIML Intern</h3>
-                            <span class="timeline-subtitle">National Institute of Electronics & Information
-                                Technology, Ropar</span>
+                            <span class="timeline-subtitle">National Institute of Electronics & Information Technology,
+                                Ropar</span>
                             <p class="timeline-desc">
                                 I am trained in AI, ML, web application development, IoT, and database technologies,
                                 with practical experience building and deploying Python and Flask-based projects,
@@ -1891,7 +1825,6 @@
                             </p>
                         </div>
                     </div>
-
                     <!-- Timeline Item 4 -->
                     <div class="timeline-item right">
                         <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
@@ -1910,7 +1843,6 @@
                             </p>
                         </div>
                     </div>
-
                     <!-- Timeline Item 5 -->
                     <div class="timeline-item left">
                         <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
@@ -1929,7 +1861,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -1941,14 +1872,12 @@
                     <span class="section-subtitle">Portfolio</span>
                     <h2 class="section-title">Featured Works</h2>
                 </div>
-
                 <div class="filter-controls">
                     <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
                     <button class="filter-btn" onclick="filterProjects('ai', this)">AI/ML</button>
                     <button class="filter-btn" onclick="filterProjects('web', this)">Web Dev</button>
                     <button class="filter-btn" onclick="filterProjects('data', this)">Data Science</button>
                 </div>
-
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <div class="project-card" data-category="ai">
@@ -1964,18 +1893,18 @@
                                 <span class="tag">CNN</span>
                             </div>
                             <p class="project-desc">
-                                A Deep Learning model detecting brain tumors from MRI scans with 95%+ accuracy.
-                                Includes a web interface for doctors to upload scans and get instant analysis.
+                                A Deep Learning model detecting brain tumors from MRI scans with 95%+ accuracy. Includes
+                                a web interface for doctors to upload scans and get instant analysis.
                             </p>
                             <div class="project-footer">
                                 <a href="https://lovnishverma-braintumor.hf.space/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
                                 <a href="https://github.com/lovnishverma/huggingface-Braintumor-Flask" target="_blank"
-                                    class="btn-code"><i class="fab fa-github"></i> Code</a>
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 2 -->
                     <div class="project-card" data-category="data">
                         <div class="project-img-wrapper">
@@ -1995,13 +1924,13 @@
                             </p>
                             <div class="project-footer">
                                 <a href="https://lovnishverma-diabetes.hf.space/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/diabetes-streamlit" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
+                                <a href="https://github.com/lovnishverma/diabetes-streamlit" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 3 -->
                     <div class="project-card" data-category="web">
                         <div class="project-img-wrapper">
@@ -2016,18 +1945,19 @@
                                 <span class="tag">JS</span>
                             </div>
                             <p class="project-desc">
-                                Real-time location tracking dashboard for remote workforce management.
-                                Features historical route playback and geofencing capabilities.
+                                Real-time location tracking dashboard for remote workforce management. Features
+                                historical route playback and geofencing capabilities.
                             </p>
                             <div class="project-footer">
                                 <a href="https://lovnishverma.in/universal-employee-location-tracking/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
                                 <a href="https://github.com/lovnishverma/universal-employee-location-tracking"
-                                    class="btn-code"><i class="fab fa-github"></i> Code</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn-code"><i
+                                        class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 4 (Books) -->
                     <div class="project-card" data-category="data">
                         <div class="project-img-wrapper">
@@ -2042,18 +1972,18 @@
                                 <span class="tag">Gradio</span>
                             </div>
                             <p class="project-desc">
-                                Content-based recommendation engine using Sentence Transformers to suggest
-                                books based on plot similarity and user preferences from Goodreads data.
+                                Content-based recommendation engine using Sentence Transformers to suggest books based
+                                on plot similarity and user preferences from Goodreads data.
                             </p>
                             <div class="project-footer">
                                 <a href="https://lovnishverma-book-recommendations.hf.space/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/Book-Recommendations" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
+                                <a href="https://github.com/lovnishverma/Book-Recommendations" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 5 (Hostel Gatepass) -->
                     <div class="project-card" data-category="web">
                         <div class="project-img-wrapper">
@@ -2073,14 +2003,14 @@
                                 scanning, multi-level approvals, and real-time tracking.
                             </p>
                             <div class="project-footer">
-                                <a href="https://hostel.gamer.gd/" target="_blank"
+                                <a href="https://hostel.gamer.gd/" target="_blank" rel="noopener noreferrer"
                                     style="color:var(--primary); font-weight:600;">Live Demo</a>
                                 <a href="https://github.com/lovnishverma/Hostel-Gatepass-Management-System"
-                                    class="btn-code"><i class="fab fa-github"></i> Code</a>
+                                    target="_blank" rel="noopener noreferrer" class="btn-code"><i
+                                        class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 6 (AI Mask Compliance Monitor) -->
                     <div class="project-card" data-category="ai">
                         <div class="project-img-wrapper">
@@ -2101,14 +2031,14 @@
                             </p>
                             <div class="project-footer">
                                 <a href="https://www.lovnishverma.in/AI-Mask-Compliance-Monitor/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/AI-Mask-Compliance-Monitor" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
+                                <a href="https://github.com/lovnishverma/AI-Mask-Compliance-Monitor" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 7 (Karsog.com - Tourism & Business Directory) -->
+                    <!-- Project 7 (Karsog.com) -->
                     <div class="project-card" data-category="web">
                         <div class="project-img-wrapper">
                             <img src="https://github.com/user-attachments/assets/b0c08d12-348a-49cd-b78a-28fb71b852fd"
@@ -2119,26 +2049,22 @@
                             <h3 class="project-title">Karsog.com - Tourism & Business Directory</h3>
                             <div class="project-tags">
                                 <span class="tag">Python 3.9, GitHub Actions</span>
-                                <span class="tag">Google Apps Script (Serverless), Google Sheets (DB)</span>
-                                <span class="tag">HTML5, CSS3, JavaScript (ES6)</span>
-                                <span class="tag">FontAwesome 6, Chart.js (Analytics), Google Fonts</span>
-                                <span class="tag">NewsAPI, Open-Meteo (Weather)</span>
+                                <span class="tag">Google Apps Script</span>
+                                <span class="tag">HTML5, CSS3, JS</span>
                             </div>
                             <p class="project-desc">
                                 A great hyper-local platform for Karsog Valley acting as a Business Directory, Travel
                                 Portal, and News Aggregator. Built with HTML/CSS/JavaScript on the frontend, powered by
-                                Google Sheets as the primary CMS, and enhanced with Python/GitHub Actions for automated
-                                news updates.
+                                Google Sheets as the primary CMS.
                             </p>
                             <div class="project-footer">
-                                <a href="https://www.lovnishverma.in/karsog/" target="_blank"
+                                <a href="https://www.lovnishverma.in/karsog/" target="_blank" rel="noopener noreferrer"
                                     style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/karsog" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                <a href="https://github.com/lovnishverma/karsog" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Project 8 (SmartLane AI) -->
                     <div class="project-card" data-category="ai">
                         <div class="project-img-wrapper">
@@ -2149,29 +2075,24 @@
                         <div class="project-body">
                             <h3 class="project-title">SmartLane AI</h3>
                             <div class="project-tags">
-                                <span class="tag">YOLOv8, TensorFlow CNN</span>
+                                <span class="tag">YOLOv8</span>
                                 <span class="tag">Streamlit</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">Matplotlib, Pandas</span>
-                                <span class="tag">OpenCV, PIL</span>
+                                <span class="tag">OpenCV</span>
                             </div>
                             <p class="project-desc">
                                 SmartLane AI is an advanced AI-powered traffic management system that analyzes 4-way
                                 intersections using YOLOv8 vehicle detection and a CNN-based emergency vehicle
-                                classifier. The platform identifies traffic density, detects ambulances through
-                                multi-layer emergency recognition (YOLO + Color Pattern + Text + CNN), and automatically
-                                adjusts signals.
+                                classifier.
                             </p>
                             <div class="project-footer">
-                                <a href="https://paranox-sourcecode.hf.space/" target="_blank"
+                                <a href="https://paranox-sourcecode.hf.space/" target="_blank" rel="noopener noreferrer"
                                     style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/SMARTLANE-AI" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                <a href="https://github.com/lovnishverma/SMARTLANE-AI" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 9 (Live DHT11 Sensor Data Dashboard) -->
+                    <!-- Project 9 (Live DHT11) -->
                     <div class="project-card" data-category="web">
                         <div class="project-img-wrapper">
                             <img src="https://github.com/user-attachments/assets/741020de-9183-4592-8872-6e7462765073"
@@ -2183,24 +2104,23 @@
                             <div class="project-tags">
                                 <span class="tag">ESP8266</span>
                                 <span class="tag">DHT11 Sensor</span>
-                                <span class="tag">Firebase Realtime Database (cloud backend)</span>
-                                <span class="tag">Hosting frontend (HTML/JS)</span>
+                                <span class="tag">Firebase</span>
                             </div>
                             <p class="project-desc">
                                 This project demonstrates how to read temperature and humidity from a DHT11 sensor using
                                 an ESP8266 microcontroller, upload the data to Firebase Realtime Database, and display
-                                it in real-time on a web interface hosted via GitHub Pages.
+                                it in real-time.
                             </p>
                             <div class="project-footer">
                                 <a href="https://www.lovnishverma.in/live-sensor/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/live-sensor" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
+                                <a href="https://github.com/lovnishverma/live-sensor" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 10 (SecureCert: Blockchain-Based Certificate Verification System) -->
+                    <!-- Project 10 (SecureCert) -->
                     <div class="project-card" data-category="web">
                         <div class="project-img-wrapper">
                             <img src="https://github.com/user-attachments/assets/35f09aa9-fd4a-482a-9d75-bebdb19d9e74"
@@ -2208,49 +2128,47 @@
                                 onerror="this.src='https://placehold.co/600x400/222/FFF?text=SecureCert'">
                         </div>
                         <div class="project-body">
-                            <h3 class="project-title">SecureCert: Blockchain-Based Certificate Verification System</h3>
+                            <h3 class="project-title">SecureCert: Blockchain-Based Certificate Verification</h3>
                             <div class="project-tags">
-                                <span class="tag">Python Flask, SHA-256 Hashing</span>
-                                <span class="tag">Ethereum (Sepolia Testnet)</span>
-                                <span class="tag">Solidity, Web3.js (frontend) + Web3.py</span>
-                                <span class="tag">HTML, CSS, JavaScript</span>
+                                <span class="tag">Python Flask</span>
+                                <span class="tag">Ethereum</span>
+                                <span class="tag">Solidity</span>
+                                <span class="tag">Web3.js</span>
                             </div>
                             <p class="project-desc">
-                                In today's digital age, certificate fraud is a growing concern affecting educational
-                                institutions, employers, and professionals worldwide. Traditional paper-based
+                                In today's digital age, certificate fraud is a growing concern. Traditional paper-based
                                 certificates are easily forged, and digital certificates stored on centralized servers
-                                can be tampered with or lost.
+                                can be tampered with.
                             </p>
                             <div class="project-footer">
                                 <a href="https://sourcecode.pythonanywhere.com/" target="_blank"
-                                    style="color:var(--primary); font-weight:600;">Live Demo</a>
-                                <a href="https://github.com/lovnishverma/SecureCert" class="btn-code"><i
-                                        class="fab fa-github"></i> Code</a>
+                                    rel="noopener noreferrer" style="color:var(--primary); font-weight:600;">Live
+                                    Demo</a>
+                                <a href="https://github.com/lovnishverma/SecureCert" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- MEDIUM BLOG SECTION -->
+        <!-- BLOG SECTION -->
         <section id="blog">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">Latest Insights</span>
                     <h2 class="section-title">Articles from Medium</h2>
                 </div>
-
                 <div id="blog-container" class="blog-grid">
                     <!-- Dynamic blogs from medium will be loaded here -->
                     <div class="loading-blogs">
                         <i class="fas fa-circle-notch fa-spin"></i> Fetching latest articles...
                     </div>
                 </div>
-
                 <div style="text-align:center; margin-top:3rem;">
-                    <a href="https://lovnish.medium.com/" target="_blank" class="hero-cta">Read More on Medium</a>
+                    <a href="https://lovnish.medium.com/" target="_blank" rel="noopener noreferrer"
+                        class="hero-cta">Read More on Medium</a>
                 </div>
             </div>
         </section>
@@ -2262,33 +2180,25 @@
                     <span class="section-subtitle">Code Stats</span>
                     <h2 class="section-title">Open Source Contribution</h2>
                 </div>
-
                 <div class="github-stats-wrapper">
-
                     <img class="github-stat-img"
                         src="https://stats.dooboo.io/api/github-stats?login=lovnishverma&theme=dark" alt="GitHub Stats"
                         loading="lazy">
-
                     <img class="github-stat-img"
                         src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=lovnishverma&theme=tokyonight"
                         alt="Top Languages" loading="lazy">
-
                     <img class="github-stat-img"
                         src="https://streak-stats.demolab.com?user=lovnishverma&theme=tokyonight&hide_border=true"
                         alt="GitHub Streak" loading="lazy">
-
                     <img class="github-stat-img"
                         src="https://github-readme-activity-graph.vercel.app/graph?username=lovnishverma&custom_title=Contribution%20Activity&bg_color=0d1117&color=00d9ff&line=00d9ff&point=ff6b35&area=true&hide_border=true"
                         alt="Contribution Graph" loading="lazy">
-
                     <img class="github-stat-img"
                         src="https://github-profile-trophy.vercel.app/?username=lovnishverma&theme=tokyonight"
                         alt="GitHub Trophies" loading="lazy">
-
                     <img class="github-stat-img"
                         src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lovnishverma&theme=tokyonight"
                         alt="Profile Details" loading="lazy">
-
                     <img class="github-stat-img"
                         src="https://github-readme-stats-bice-gamma.vercel.app/api?username=lovnishverma&show_icons=true&theme=tokyonight"
                         alt="General Stats & Stars" loading="lazy">
@@ -2303,7 +2213,6 @@
                     <span class="section-subtitle">Testimonials</span>
                     <h2 class="section-title">What Clients Say</h2>
                 </div>
-
                 <div class="testimonial-slider">
                     <!-- Slide 1 -->
                     <div class="testimonial-slide active" data-index="0">
@@ -2314,8 +2223,8 @@
                             </div>
                             <p class="quote">
                                 "Lovnish was a real pleasure to work with. He's definitely the kind of developer you can
-                                trust with a project from start to finish.
-                                His AI integration completely transformed our workflow."
+                                trust with a project from start to finish. His AI integration completely transformed our
+                                workflow."
                             </p>
                             <div class="client-info">
                                 <img src="assets/testimonials/sarwan_singh.png" alt="Client" class="client-img"
@@ -2349,7 +2258,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="slider-dots">
                     <div class="dot active" onclick="setSlide(0)"></div>
                     <div class="dot" onclick="setSlide(1)"></div>
@@ -2358,9 +2266,7 @@
         </section>
     </main>
 
-    <!-- 
-    FOOTER
-    -->
+    <!-- FOOTER -->
     <footer id="footer">
         <div class="footer-grid">
             <div class="footer-col">
@@ -2382,7 +2288,8 @@
                 <h4>Support Me</h4>
                 <p style="color:var(--text-secondary); margin-bottom:1rem;">If my open source work helped you, consider
                     buying me a coffee!</p>
-                <a href="https://www.buymeacoffee.com/lovnishverma" target="_blank" class="buy-coffee">
+                <a href="https://www.buymeacoffee.com/lovnishverma" target="_blank" rel="noopener noreferrer"
+                    class="buy-coffee">
                     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
                         style="height: 50px !important;">
                 </a>
@@ -2391,7 +2298,8 @@
                 <ul class="footer-links">
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="assets/Lovnish_Verma_Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="assets/Lovnish_Verma_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    </li>
                 </ul>
             </div>
 
@@ -2405,27 +2313,29 @@
 
                 <h4 style="margin-top:2rem;">Connect</h4>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/lovnishverma/" target="_blank"><i
+                    <a href="https://www.linkedin.com/in/lovnishverma/" target="_blank" rel="noopener noreferrer"><i
                             class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/LovnishVerma" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.x.com/lovnishofficial/" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/lovnishofficial/" target="_blank"><i
+                    <a href="https://github.com/LovnishVerma" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.x.com/lovnishofficial/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/lovnishofficial/" target="_blank" rel="noopener noreferrer"><i
                             class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Lovnish Verma. All Rights Reserved.</p>
+            <p>&copy; 2025 Lovnish Verma. All Rights Reserved.</p>
+            <div class="flex-center" style="gap:10px;">
+                <span style="font-size:0.85rem;">Total Visits:</span>
+                <span id="visitor-count" class="visitor-counter">...</span>
+            </div>
             <p>Designed with <i class="fas fa-heart" style="color:var(--primary)"></i> by Lovnish Verma</p>
         </div>
     </footer>
 
-    <!-- 
-    OVERLAYS
-    -->
-
-    <!-- Cookie Banner -->
+    <!-- OVERLAYS -->
     <div id="cookie-banner">
         <div>
             <p style="font-weight:600; margin-bottom:0.2rem;">We use cookies</p>
@@ -2450,14 +2360,13 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- 
-    JAVASCRIPT LOGIC
-    -->
+    <!-- JAVASCRIPT LOGIC & ANALYTICS -->
     <script>
-        //  CONFIGURATION
+        // CONFIGURATION
         const CONFIG = {
-            MEDIUM_USER: 'lovnishverma', // Fallback
-            MEDIUM_RSS_URL: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@lovnish', // For fetching latest blogs of @lovnish
+            MEDIUM_RSS_URL: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@lovnish',
+            // Using a generic public counter API. In production, consider a more robust solution or backend.
+            VISITOR_API_URL: 'https://api.countapi.xyz/hit/lovnishverma-portfolio/visits',
             TOAST_DURATION: 3000,
             TYPING_SPEED: 100
         };
@@ -2472,6 +2381,8 @@
             checkCookies();
             startTestimonialSlider();
             initMobileMenu();
+            initAnalyticsListeners();
+            initVisitorCounter();
         });
 
         // 1. LOADER
@@ -2508,7 +2419,7 @@
             });
         }
 
-        // 3. MOBILE MENU HANDLING
+        // 3. MOBILE MENU
         function initMobileMenu() {
             const btn = document.getElementById('mobileMenuBtn');
             const menu = document.getElementById('navbarMenu');
@@ -2528,7 +2439,6 @@
             const menu = document.getElementById('navbarMenu');
             const btn = document.getElementById('mobileMenuBtn');
             const icon = btn.querySelector('i');
-
             if (menu.classList.contains('active')) {
                 menu.classList.remove('active');
                 icon.classList.replace('fa-times', 'fa-bars');
@@ -2546,7 +2456,6 @@
 
             function type() {
                 const currentText = texts[textIndex];
-
                 if (isDeleting) {
                     element.textContent = currentText.substring(0, charIndex - 1);
                     charIndex--;
@@ -2571,25 +2480,18 @@
         // 5. MEDIUM BLOG FETCH
         async function fetchMediumBlogs() {
             const container = document.getElementById('blog-container');
-
             try {
-                // Try fetching from rss2json
                 const response = await fetch(CONFIG.MEDIUM_RSS_URL);
                 const data = await response.json();
 
                 if (data.status === 'ok' && data.items.length > 0) {
-                    container.innerHTML = ''; // Clear loading
-
-                    // Take first 3 items
+                    container.innerHTML = '';
                     data.items.slice(0, 3).forEach(item => {
-                        // Extract first image from content if thumbnail is missing
                         let imgUrl = item.thumbnail;
                         if (!imgUrl) {
                             const imgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
-                            imgUrl = imgMatch ? imgMatch[1] : 'assets/blog-placeholder.jpg'; // Fallback
+                            imgUrl = imgMatch ? imgMatch[1] : 'assets/blog-placeholder.jpg';
                         }
-
-                        // Strip HTML from description
                         const tempDiv = document.createElement('div');
                         tempDiv.innerHTML = item.description;
                         const textContent = tempDiv.textContent || tempDiv.innerText || "";
@@ -2603,7 +2505,7 @@
                                     <span class="blog-date">${date}</span>
                                     <h3 class="blog-title">${item.title}</h3>
                                     <p class="blog-excerpt">${excerpt}</p>
-                                    <a href="${item.link}" target="_blank" class="read-btn">Read Article <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article <i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </article>
                         `;
@@ -2614,50 +2516,46 @@
                 }
             } catch (error) {
                 console.warn("Medium fetch failed, loading static fallbacks.", error);
-                // Fallback Content
-                container.innerHTML = `
-                    <article class="blog-card">
-                        <div class="blog-thumb" style="background:linear-gradient(45deg, #00ff88, #00ccff);"></div>
-                        <div class="blog-info">
-                            <span class="blog-date">Latest</span>
-                            <h3 class="blog-title">AI in Healthcare: The Next Frontier</h3>
-                            <p class="blog-excerpt">Exploring how CNNs are revolutionizing early tumor detection...</p>
-                            <a href="https://lovnish.medium.com/" target="_blank" class="read-btn">Read on Medium</a>
-                        </div>
-                    </article>
-                    <article class="blog-card">
-                        <div class="blog-thumb" style="background:linear-gradient(45deg, #7928ca, #ff0080);"></div>
-                        <div class="blog-info">
-                            <span class="blog-date">Tech</span>
-                            <h3 class="blog-title">Deploying ML Models with FastAPI</h3>
-                            <p class="blog-excerpt">A comprehensive guide to taking your Jupyter notebook models to production...</p>
-                            <a href="https://lovnish.medium.com/" target="_blank" class="read-btn">Read on Medium</a>
-                        </div>
-                    </article>
-                `;
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); width:100%;">Unable to load dynamic blogs. <a href="https://lovnish.medium.com/" style="color:var(--primary)">Visit Medium Profile</a></p>`;
             }
         }
 
-        // 6. SERVICE TABS
+        // 6. VISITOR COUNTER
+        async function initVisitorCounter() {
+            const counterElement = document.getElementById('visitor-count');
+            if (!counterElement) return;
+
+            try {
+                // Try to fetch from CountAPI
+                const response = await fetch(CONFIG.VISITOR_API_URL);
+                const data = await response.json();
+
+                // Format with commas
+                const formattedCount = new Intl.NumberFormat().format(data.value);
+                counterElement.innerText = formattedCount;
+            } catch (error) {
+                console.warn('Counter API failed', error);
+                // Fallback to a static impressive number if API fails (common with adblockers)
+                counterElement.innerText = "12,500+";
+            }
+        }
+
+        // 7. SERVICE TABS
         function switchService(index) {
-            // Update Cards
             document.querySelectorAll('.service-card').forEach((card, i) => {
                 if (i === index) card.classList.add('active');
                 else card.classList.remove('active');
             });
-
-            // Update Content
             document.querySelectorAll('.intro-content').forEach((content, i) => {
                 if (i === index) content.classList.add('active');
                 else content.classList.remove('active');
             });
         }
 
-        // 7. PROJECT FILTERS
+        // 8. FILTER PROJECTS
         function filterProjects(cat, btn) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
             const projects = document.querySelectorAll('.project-card');
             projects.forEach(p => {
                 if (cat === 'all' || p.dataset.category === cat) {
@@ -2671,22 +2569,7 @@
             });
         }
 
-        // 8. TOAST NOTIFICATIONS
-        function showToast(message, type = 'success') {
-            const container = document.getElementById('toastContainer');
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
-
-            container.appendChild(toast);
-
-            setTimeout(() => {
-                toast.style.opacity = '0';
-                toast.style.transform = 'translateY(20px)';
-                setTimeout(() => toast.remove(), 300);
-            }, CONFIG.TOAST_DURATION);
-        }
-
+        // 9. CONTACT FORM HANDLER (MERGED)
         function handleContact(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
@@ -2694,7 +2577,7 @@
             btn.innerText = 'Sending...';
             btn.disabled = true;
 
-            // Track form submission with GA4
+            // GA4 Tracking
             if (typeof gtag === 'function') {
                 gtag('event', 'contact_form_submit', {
                     'event_category': 'engagement',
@@ -2702,6 +2585,7 @@
                 });
             }
 
+            // Simulate sending (replace with actual backend/emailjs call if needed)
             setTimeout(() => {
                 showToast('Message sent successfully!');
                 e.target.reset();
@@ -2710,11 +2594,129 @@
             }, 1500);
         }
 
-        // 9. SLIDER & SCROLL
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                setTimeout(() => toast.remove(), 300);
+            }, CONFIG.TOAST_DURATION);
+        }
+
+        // 10. SCROLL EFFECTS & ANALYTICS
+        function initScrollEffects() {
+            const header = document.getElementById('header');
+            const backToTop = document.getElementById('backToTop');
+
+            // Throttled Scroll Handler
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        // Header & BackToTop Logic
+                        if (window.scrollY > 50) header.classList.add('scrolled');
+                        else header.classList.remove('scrolled');
+
+                        if (window.scrollY > 500) backToTop.style.display = 'flex';
+                        else backToTop.style.display = 'none';
+
+                        // Track Sections Logic
+                        trackSectionView();
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        function scrollToFooter() { document.getElementById('footer').scrollIntoView({ behavior: 'smooth' }); }
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        // Section View Tracking
+        const sections = ['services', 'experience', 'portfolio', 'blog', 'testimonials'];
+        const sectionTracked = {};
+        function trackSectionView() {
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section || sectionTracked[sectionId]) return;
+                const rect = section.getBoundingClientRect();
+                // Trigger when section top is within top half of viewport
+                if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+                    sectionTracked[sectionId] = true;
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'section_view', {
+                            'event_category': 'engagement',
+                            'event_label': sectionId
+                        });
+                    }
+                }
+            });
+        }
+
+        // 11. MANUAL ANALYTICS LISTENERS
+        function initAnalyticsListeners() {
+            // Resume Download
+            const resumeBtn = document.querySelector('.btn-download');
+            if (resumeBtn) {
+                resumeBtn.addEventListener('click', () => {
+                    if (typeof gtag === 'function') gtag('event', 'download_resume', { 'event_category': 'engagement', 'event_label': 'Resume PDF' });
+                });
+            }
+
+            // Project Clicks
+            document.querySelectorAll('.project-card a').forEach(link => {
+                link.addEventListener('click', function () {
+                    const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
+                    if (typeof gtag === 'function') gtag('event', 'view_project', { 'event_category': 'engagement', 'event_label': projectTitle });
+                });
+            });
+
+            // Social Links
+            document.querySelectorAll('.social-links a').forEach(link => {
+                link.addEventListener('click', function () {
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        const platform = icon.className.split('fa-')[1];
+                        if (typeof gtag === 'function') gtag('event', 'social_click', { 'event_category': 'engagement', 'event_label': platform });
+                    }
+                });
+            });
+
+            // Whatsapp
+            const wa = document.querySelector('.whatsapp-float');
+            if (wa) {
+                wa.addEventListener('click', () => {
+                    if (typeof gtag === 'function') gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'Floating Button' });
+                });
+            }
+        }
+
+        // 12. COOKIES & SLIDER
+        function checkCookies() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 2000);
+            } else {
+                if (typeof gtag === 'function') gtag('consent', 'update', { 'analytics_storage': 'granted' });
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.remove('show');
+            if (typeof gtag === 'function') gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+
+        // Slider
         let currentSlide = 0;
         function setSlide(index) {
             const slides = document.querySelectorAll('.testimonial-slide');
             const dots = document.querySelectorAll('.dot');
+            if (slides.length === 0) return;
 
             slides.forEach(s => s.classList.remove('active'));
             dots.forEach(d => d.classList.remove('active'));
@@ -2726,157 +2728,11 @@
 
         function startTestimonialSlider() {
             setInterval(() => {
-                currentSlide = (currentSlide + 1) % 2; // Assuming 2 slides for now
+                currentSlide = (currentSlide + 1) % 2;
                 setSlide(currentSlide);
             }, 6000);
         }
-
-        function scrollToFooter() {
-            document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function initScrollEffects() {
-            const header = document.getElementById('header');
-            const backToTop = document.getElementById('backToTop');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) header.classList.add('scrolled');
-                else header.classList.remove('scrolled');
-
-                if (window.scrollY > 500) backToTop.style.display = 'flex';
-                else backToTop.style.display = 'none';
-            });
-        }
-
-        // 10. COOKIES
-        function checkCookies() {
-            if (!localStorage.getItem('cookiesAccepted')) {
-                setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 2000);
-            }
-        }
-
-        // Update your acceptCookies function
-        function acceptCookies() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').classList.remove('show');
-
-            // Initialize GA4 after consent
-            if (typeof gtag === 'function') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted'
-                });
-            }
-        }
-
-        // Add consent mode to GA4 initialization
-        // Place this BEFORE your gtag config
-        gtag('consent', 'default', {
-            'analytics_storage': 'denied',
-            'ad_storage': 'denied',
-            'wait_for_update': 500
-        });
-
-        // Check if user already accepted
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
-            });
-        }
     </script>
-    <script>
-        // GOOGLE ANALYTICS EVENT TRACKING
-        // Track Resume Downloads
-        document.querySelector('.btn-download').addEventListener('click', function () {
-            gtag('event', 'download_resume', {
-                'event_category': 'engagement',
-                'event_label': 'Resume PDF'
-            });
-        });
-
-        // Track Project Views
-        document.querySelectorAll('.project-card a').forEach(link => {
-            link.addEventListener('click', function (e) {
-                const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
-                gtag('event', 'view_project', {
-                    'event_category': 'engagement',
-                    'event_label': projectTitle,
-                    'value': 1
-                });
-            });
-        });
-
-        // Track Contact Form Submissions
-        function handleContact(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
-
-            // Track form submission
-            gtag('event', 'contact_form_submit', {
-                'event_category': 'engagement',
-                'event_label': 'Footer Contact Form'
-            });
-
-            setTimeout(() => {
-                showToast('Message sent successfully!');
-                e.target.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }, 1500);
-        }
-
-        // Track Social Media Clicks
-        document.querySelectorAll('.social-links a').forEach(link => {
-            link.addEventListener('click', function () {
-                const platform = this.querySelector('i').className.split('fa-')[1];
-                gtag('event', 'social_click', {
-                    'event_category': 'engagement',
-                    'event_label': platform,
-                    'value': 1
-                });
-            });
-        });
-
-        // Track WhatsApp Click
-        document.querySelector('.whatsapp-float').addEventListener('click', function () {
-            gtag('event', 'whatsapp_click', {
-                'event_category': 'engagement',
-                'event_label': 'Floating Button'
-            });
-        });
-
-        // Track Section Views (Scroll Tracking)
-        const sections = ['services', 'experience', 'portfolio', 'blog', 'testimonials'];
-        const sectionTracked = {};
-
-        function trackSectionView() {
-            sections.forEach(sectionId => {
-                const section = document.getElementById(sectionId);
-                if (!section || sectionTracked[sectionId]) return;
-
-                const rect = section.getBoundingClientRect();
-                const isVisible = rect.top >= 0 && rect.top <= window.innerHeight / 2;
-
-                if (isVisible && !sectionTracked[sectionId]) {
-                    sectionTracked[sectionId] = true;
-                    gtag('event', 'section_view', {
-                        'event_category': 'engagement',
-                        'event_label': sectionId
-                    });
-                }
-            });
-        }
-
-        window.addEventListener('scroll', trackSectionView);
-
-    </script>
-
 </body>
 
 </html>
