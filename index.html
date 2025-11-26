@@ -2689,11 +2689,18 @@
 
         function handleContact(e) {
             e.preventDefault();
-            // Simulate API call
             const btn = e.target.querySelector('button');
             const originalText = btn.innerText;
             btn.innerText = 'Sending...';
             btn.disabled = true;
+
+            // Track form submission with GA4
+            if (typeof gtag === 'function') {
+                gtag('event', 'contact_form_submit', {
+                    'event_category': 'engagement',
+                    'event_label': 'Footer Contact Form'
+                });
+            }
 
             setTimeout(() => {
                 showToast('Message sent successfully!');
@@ -2751,9 +2758,33 @@
                 setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 2000);
             }
         }
+
+        // Update your acceptCookies function
         function acceptCookies() {
             localStorage.setItem('cookiesAccepted', 'true');
             document.getElementById('cookie-banner').classList.remove('show');
+
+            // Initialize GA4 after consent
+            if (typeof gtag === 'function') {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+            }
+        }
+
+        // Add consent mode to GA4 initialization
+        // Place this BEFORE your gtag config
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'wait_for_update': 500
+        });
+
+        // Check if user already accepted
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
         }
     </script>
     <script>
