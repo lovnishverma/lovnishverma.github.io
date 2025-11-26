@@ -2526,19 +2526,20 @@
             if (!counterElement) return;
 
             try {
-                const response = await fetch("https://counterapi.dev/api/lovnishverma/portfolio2025/hit");
+                const response = await fetch(
+                    "https://cors.sh/https://api.countapi.xyz/hit/lovnishverma/portfolio2025",
+                    { headers: { "x-cors-api-key": "temp_6551903fb25244f260bb3d7d6a138a94" } }
+                );
+
                 const data = await response.json();
 
-                if (data && data.count !== undefined) {
-                    counterElement.innerText = new Intl.NumberFormat().format(data.count);
-                } else {
-                    counterElement.innerText = "N/A";
-                }
+                counterElement.innerText = new Intl.NumberFormat().format(data.value);
             } catch (error) {
                 console.warn("Visitor counter failed:", error);
                 counterElement.innerText = "N/A";
             }
         }
+
 
 
         // 7. SERVICE TABS
