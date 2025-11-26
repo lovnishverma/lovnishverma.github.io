@@ -2526,19 +2526,20 @@
             if (!counterElement) return;
 
             try {
-                // Try to fetch from CountAPI
-                const response = await fetch(CONFIG.VISITOR_API_URL);
+                const response = await fetch("https://counterapi.dev/api/lovnishverma/portfolio2025/hit");
                 const data = await response.json();
 
-                // Format with commas
-                const formattedCount = new Intl.NumberFormat().format(data.value);
-                counterElement.innerText = formattedCount;
+                if (data && data.count !== undefined) {
+                    counterElement.innerText = new Intl.NumberFormat().format(data.count);
+                } else {
+                    counterElement.innerText = "N/A";
+                }
             } catch (error) {
-                console.warn('Counter API failed', error);
-                // Fallback to a static impressive number if API fails (common with adblockers)
-                counterElement.innerText = "12,500+";
+                console.warn("Visitor counter failed:", error);
+                counterElement.innerText = "N/A";
             }
         }
+
 
         // 7. SERVICE TABS
         function switchService(index) {
