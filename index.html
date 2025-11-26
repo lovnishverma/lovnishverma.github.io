@@ -2365,8 +2365,6 @@
         // CONFIGURATION
         const CONFIG = {
             MEDIUM_RSS_URL: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@lovnish',
-            // Using a generic public counter API. In production, consider a more robust solution or backend.
-            VISITOR_API_URL: 'https://api.countapi.xyz/hit/lovnishverma/portfolio2025',
             TOAST_DURATION: 3000,
             TYPING_SPEED: 100
         };
@@ -2382,7 +2380,7 @@
             startTestimonialSlider();
             initMobileMenu();
             initAnalyticsListeners();
-            initVisitorCounter();
+            // initVisitorCounter(); // MOVED TO MODULE SCRIPT
         });
 
         // 1. LOADER
@@ -2520,24 +2518,7 @@
             }
         }
 
-        // 6. VISITOR COUNTER
-        async function initVisitorCounter() {
-            const counterElement = document.getElementById('visitor-count');
-            if (!counterElement) return;
-
-            const ref = db.ref("visits");
-
-            // Atomically increment in one operation
-            ref.transaction((current) => {
-                return (current || 0) + 1;
-            }).then((result) => {
-                counterElement.innerText = new Intl.NumberFormat().format(result.snapshot.val());
-            }).catch((error) => {
-                console.error("Firebase counter error:", error);
-                counterElement.innerText = "N/A";
-            });
-        }
-
+        // 6. VISITOR COUNTER REMOVED FROM HERE - MOVED TO MODULE SCRIPT
 
         // 7. SERVICE TABS
         function switchService(index) {
@@ -2736,13 +2717,11 @@
 
     <script type="module">
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        // Import Database functions
+        import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
             apiKey: "AIzaSyAAvulmzNAHWTSDEHSpvBQKeKdXO5kEXio",
             authDomain: "lovnish-portfolio.firebaseapp.com",
@@ -2757,6 +2736,26 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+
+        // Visitor Counter Logic (Moved here to access 'db')
+        const counterElement = document.getElementById('visitor-count');
+        if (counterElement) {
+            const visitsRef = ref(db, 'visits');
+
+            // Atomically increment the visitor count
+            runTransaction(visitsRef, (currentData) => {
+                return (currentData || 0) + 1;
+            }).then((result) => {
+                if (result.committed) {
+                    const count = result.snapshot.val();
+                    counterElement.innerText = new Intl.NumberFormat().format(count);
+                }
+            }).catch((error) => {
+                console.error("Firebase counter error:", error);
+                counterElement.innerText = "N/A";
+            });
+        }
     </script>
 
 </body>
