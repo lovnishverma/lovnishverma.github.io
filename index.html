@@ -97,9 +97,8 @@
             --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.05);
         }
 
-        /* ========================================
+        /*
         GLOBAL RESETS & UTILITIES
-        ========================================
         */
         * {
             margin: 0;
@@ -161,6 +160,14 @@
             background-clip: text;
         }
 
+        #typed-text {
+            display: inline-block;
+            min-height: 1.2em;
+            /* Reserves space for the line even when empty */
+            vertical-align: bottom;
+            /* Keeps alignment with the previous text */
+        }
+
         .flex-center {
             display: flex;
             justify-content: center;
@@ -189,9 +196,8 @@
             background: var(--primary);
         }
 
-        /* ========================================
+        /*
         LOADER ANIMATION
-        ========================================
         */
         #page-loader {
             position: fixed;
@@ -216,9 +222,8 @@
             animation: spin 1s linear infinite;
         }
 
-        /* ========================================
+        /*
         HEADER & NAVIGATION
-        ========================================
         */
         #header {
             height: var(--header-height);
@@ -351,9 +356,8 @@
             z-index: 1001;
         }
 
-        /* ========================================
+        /*
         HERO SECTION
-        ========================================
         */
         #hero {
             margin-top: var(--header-height);
@@ -443,9 +447,8 @@
             margin-top: 0.5rem;
         }
 
-        /* ========================================
+        /*
         ORBIT ANIMATION
-        ========================================
         */
         .hero-visual {
             flex: 1;
@@ -523,9 +526,8 @@
             z-index: 10;
         }
 
-        /* ========================================
+        /*
         SERVICES SECTION
-        ========================================
         */
         #services {
             padding: 6rem 0;
@@ -617,9 +619,8 @@
             display: block;
         }
 
-        /* ========================================
+        /*
         PROJECTS SECTION
-        ========================================
         */
         #portfolio {
             padding: 6rem 0;
@@ -766,9 +767,8 @@
             background: #333;
         }
 
-        /* ========================================
+        /*
         BLOG SECTION
-        ========================================
         */
         #blog {
             padding: 6rem 0;
@@ -852,9 +852,8 @@
             font-style: italic;
         }
 
-        /* ========================================
+        /*
         GITHUB ACTIVITY
-        ========================================
         */
         #github-activity {
             padding: 4rem 0;
@@ -1426,15 +1425,6 @@
                 bottom: 80px;
             }
         }
-
-        /* is is to stop the shaking */
-        #typed-text {
-            display: inline-block;
-            min-height: 1.2em;
-            /* Reserves space for the line even when empty */
-            vertical-align: bottom;
-            /* Keeps alignment with the previous text */
-        }
     </style>
 </head>
 
@@ -1447,9 +1437,7 @@
     </div>
 
     <!-- 
-    ========================================
     HEADER
-    ========================================
     -->
     <header id="header">
         <div class="container">
