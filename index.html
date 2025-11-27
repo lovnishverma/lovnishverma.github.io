@@ -2451,10 +2451,12 @@
                     Have a project in mind? Let's discuss how we can use AI and modern web tech to solve your business
                     problems.
                 </p>
-                <form id="contactForm" onsubmit="handleContact(event)" class="contact-form">
-                    <input type="text" placeholder="Your Name" class="form-input" required>
-                    <input type="email" placeholder="Email Address" class="form-input" required>
-                    <textarea placeholder="How can I help you?" rows="3" class="form-input" required></textarea>
+                <form action="https://formspree.io/f/xovoeazy" method="POST" id="contactForm"
+                    onsubmit="handleContact(event)" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                    <input type="email" name="email" placeholder="Email Address" class="form-input" required>
+                    <textarea placeholder="How can I help you?" name="message" rows="3" class="form-input"
+                        required></textarea>
                     <button type="submit" class="btn-download"
                         style="border:none; cursor:pointer; justify-content:center;">Send Message</button>
                 </form>
