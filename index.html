@@ -2662,7 +2662,7 @@
 
                 if (data.status === 'ok' && data.items.length > 0) {
                     container.innerHTML = '';
-                    data.items.slice(0, 8).forEach(item => {
+                    data.items.slice(0, 12).forEach(item => {
                         let imgUrl = item.thumbnail;
                         if (!imgUrl) {
                             const imgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
