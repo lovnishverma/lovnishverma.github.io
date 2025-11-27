@@ -2727,7 +2727,7 @@
             });
         }
 
-        // 9. CONTACT FORM HANDLER (MERGED)
+        // 9. CONTACT FORM HANDLER (FIXED)
         function handleContact(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
@@ -2743,13 +2743,27 @@
                 });
             }
 
-            // Simulate sending (replace with actual backend/emailjs call if needed)
-            setTimeout(() => {
-                showToast('Message sent successfully!');
-                e.target.reset();
+            // Real Fetch Request to Formspree
+            const formData = new FormData(e.target);
+            fetch(e.target.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    showToast('Message sent successfully!');
+                    e.target.reset();
+                } else {
+                    showToast('Oops! There was a problem submitting your form', 'error');
+                }
+            }).catch(error => {
+                showToast('Oops! There was a problem submitting your form', 'error');
+            }).finally(() => {
                 btn.innerText = originalText;
                 btn.disabled = false;
-            }, 1500);
+            });
         }
 
         function showToast(message, type = 'success') {
