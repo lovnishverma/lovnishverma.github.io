@@ -2348,6 +2348,46 @@
                     </div>
 
 
+                    <!-- Project 17 (Face Recognition Attendance System) -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-img-wrapper">
+                            <img src="https://github.com/user-attachments/assets/9fd44c11-a2c2-421d-b19f-919cf2f4094e"
+                                alt="Face Recognition Attendance System" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/222/FFF?text=Face+Recognition+Attendance+System'">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Face Recognition Attendance System</h3>
+                            <div class="project-tags">
+                                <span class="tag">JetPack 5.x (includes CUDA, cuDNN, OpenCV, Python 3.8+)</span>
+                                <span class="tag">Dlib, OpenCV, NumPy, Face Recognition, CMake</span>
+                            </div>
+                            <p class="project-desc">
+                                A real-time Face Recognition Attendance System built using Dlib and OpenCV, optimized
+                                with CUDA acceleration for high performance on NVIDIA Jetson Nano / Orin and Windows
+                                PCs. The system captures faces via webcam, recognizes registered users using Dlib’s deep
+                                metric learning model, and automatically records attendance into daily CSV files.
+                            </p>
+                            <div class="project-footer">
+                                <a href="https://www.youtube.com/watch?v=C5OhL3P5rpo&feature=youtu.be" target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="color:var(--primary); font-weight:600; display:flex; align-items:center; gap:6px;">
+
+                                    <!-- YouTube Icon (SVG) -->
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="red"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.6-.9-2-1C17.3 2.5 12 2.5 12 2.5h-.1s-5.3 0-8.7.4c-.4.1-1.2.1-2 1C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.8.2 7.6.4 7.6.4s5.3 0 8.7-.4c.4-.1 1.2-.1 2-1 .6-.7.8-2.3.8-2.3s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.7 14.6V7.4l6.4 3.6-6.4 3.6z" />
+                                    </svg>
+
+                                    Live Video
+                                </a>
+
+                                <a href="https://github.com/lovnishverma/FaceRecognition-Attendance" target="_blank"
+                                    rel="noopener noreferrer" class="btn-code"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -2719,9 +2759,7 @@
             }
         }
 
-        // 6. VISITOR COUNTER REMOVED FROM HERE - MOVED TO MODULE SCRIPT
-
-        // 7. SERVICE TABS
+        // 6. SERVICE TABS
         function switchService(index) {
             document.querySelectorAll('.service-card').forEach((card, i) => {
                 if (i === index) card.classList.add('active');
@@ -2733,7 +2771,7 @@
             });
         }
 
-        // 8. FILTER PROJECTS
+        // 7. FILTER PROJECTS
         function filterProjects(cat, btn) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -2750,7 +2788,7 @@
             });
         }
 
-        // 9. CONTACT FORM HANDLER (Using Formspree)
+        // 8. CONTACT FORM HANDLER (Using Formspree)
         function handleContact(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
@@ -2802,7 +2840,7 @@
             }, CONFIG.TOAST_DURATION);
         }
 
-        // 10. SCROLL EFFECTS & ANALYTICS
+        // 9. SCROLL EFFECTS & ANALYTICS
         function initScrollEffects() {
             const header = document.getElementById('header');
             const backToTop = document.getElementById('backToTop');
@@ -2853,7 +2891,7 @@
             });
         }
 
-        // 11. MANUAL ANALYTICS LISTENERS
+        // 10. MANUAL ANALYTICS LISTENERS
         function initAnalyticsListeners() {
             // Resume Download
             const resumeBtn = document.querySelector('.btn-download');
@@ -2891,7 +2929,7 @@
             }
         }
 
-        // 12. COOKIES & SLIDER
+        // 11. COOKIES & SLIDER
         function checkCookies() {
             if (!localStorage.getItem('cookiesAccepted')) {
                 setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 2000);
