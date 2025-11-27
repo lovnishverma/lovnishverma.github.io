@@ -2653,7 +2653,7 @@
             type();
         }
 
-        // 5. MEDIUM BLOG FETCH
+        // 5. MEDIUM BLOG FETCH (Show more posts (data.items.slice(0, 6)) Change the number 6 to desired count)
         async function fetchMediumBlogs() {
             const container = document.getElementById('blog-container');
             try {
@@ -2662,7 +2662,7 @@
 
                 if (data.status === 'ok' && data.items.length > 0) {
                     container.innerHTML = '';
-                    data.items.slice(0, 3).forEach(item => {
+                    data.items.slice(0, 6).forEach(item => {
                         let imgUrl = item.thumbnail;
                         if (!imgUrl) {
                             const imgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
