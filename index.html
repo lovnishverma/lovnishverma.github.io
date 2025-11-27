@@ -8,7 +8,7 @@
     <meta name="google-site-verification" content="6LXGQp1AM1BbZAD8hGIdRZosN6dBokITCRz1VKWKwus" />
 
     <!-- SEO Meta Tags -->
-    <title>Lovnish Verma - AI/ML Developer & Data Scientist | Portfolio 2025</title>
+    <title>Lovnish Verma - AI/ML Developer & Data Scientist | lovnishverma.in</title>
     <meta name="description"
         content="Lovnish Verma - Expert AI/ML Developer & Data Scientist from Chandigarh, India. Specializing in machine learning, deep learning, predictive modeling, and intelligent systems." />
     <meta name="keywords"
@@ -16,7 +16,7 @@
     <meta name="author" content="Lovnish Verma" />
 
     <!-- Open Graph & Twitter Tags -->
-    <meta property="og:title" content="Lovnish Verma - AI/ML Developer & Data Scientist | Portfolio 2025" />
+    <meta property="og:title" content="Lovnish Verma - AI/ML Developer & Data Scientist | lovnishverma.in" />
     <meta property="og:description"
         content="Expert AI/ML Developer from Chandigarh with 3+ years experience. Specializing in intelligent systems, predictive modeling, and data-driven solutions." />
     <meta property="og:image" content="assets/favicon/lovnishfavicon.png" />
@@ -2727,7 +2727,7 @@
             });
         }
 
-        // 9. CONTACT FORM HANDLER (FIXED)
+        // 9. CONTACT FORM HANDLER (Using Formspree)
         function handleContact(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
@@ -2743,7 +2743,7 @@
                 });
             }
 
-            // Real Fetch Request to Formspree
+            // Fetch Request to Formspree
             const formData = new FormData(e.target);
             fetch(e.target.action, {
                 method: 'POST',
