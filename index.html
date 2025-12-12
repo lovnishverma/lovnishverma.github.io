@@ -1015,25 +1015,25 @@
                     <h2 class="section-title">Open Source Contribution</h2>
                 </div>
                 <div class="github-stats-wrapper">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://stats.dooboo.io/api/github-stats?login=lovnishverma&theme=dark" alt="GitHub Stats"
                         loading="lazy">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=lovnishverma&theme=tokyonight"
                         alt="Top Languages" loading="lazy">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://streak-stats.demolab.com?user=lovnishverma&theme=tokyonight&hide_border=true"
                         alt="GitHub Streak" loading="lazy">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://github-readme-activity-graph.vercel.app/graph?username=lovnishverma&custom_title=Contribution%20Activity&bg_color=0d1117&color=00d9ff&line=00d9ff&point=ff6b35&area=true&hide_border=true"
                         alt="Contribution Graph" loading="lazy">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://github-profile-trophy.vercel.app/?username=lovnishverma&theme=tokyonight"
                         alt="GitHub Trophies" loading="lazy">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lovnishverma&theme=tokyonight"
                         alt="Profile Details" loading="lazy">
-                    <img class="github-stat-img lazy-github"
+                    <img class="github-stat-img"
                         src="https://github-readme-stats-bice-gamma.vercel.app/api?username=lovnishverma&show_icons=true&theme=tokyonight"
                         alt="General Stats & Stars" loading="lazy">
                 </div>
@@ -1605,28 +1605,6 @@
             });
         }
     </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            const lazyImages = document.querySelectorAll("img.lazy-github");
-
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.removeAttribute("data-src");
-                        img.classList.remove("lazy-github");
-                        obs.unobserve(img);
-                    }
-                });
-            });
-
-            lazyImages.forEach(img => observer.observe(img));
-        });
-    </script>
-
 
 </body>
 
