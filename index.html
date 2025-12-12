@@ -44,7 +44,16 @@
     <link rel="apple-touch-icon" href="https://lovnishverma.in/apple-touch-icon.png">
 
     <!-- External Libraries -->
-    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            requestIdleCallback(() => {
+                const fa = document.createElement("script");
+                fa.src = "https://kit.fontawesome.com/e674bba739.js";
+                fa.crossOrigin = "anonymous";
+                document.body.appendChild(fa);
+            });
+        });
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2848P5Y9GR"></script>
