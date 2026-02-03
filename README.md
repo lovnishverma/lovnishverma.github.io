@@ -6,6 +6,9 @@ This is a fully responsive and SEO-optimized portfolio site designed using **HTM
 
 ---
 
+<img width="617" height="770" alt="Screenshot 2026-02-03 192512" src="https://github.com/user-attachments/assets/6460eb73-8196-4e22-814a-3729785fb87f" />
+
+
 ## 🚀 Features
 
 - ✅ Clean and modern responsive UI/UX
